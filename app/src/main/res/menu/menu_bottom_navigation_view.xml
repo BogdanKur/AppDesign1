@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/mainFragment"
+        android:title="@string/titleItemMainBottomNav"
+        android:icon="@drawable/choose_home"/>
+    <item
+        android:id="@+id/earningFragment"
+        android:title="@string/titleItemEarningBottomNav"
+        android:icon="@drawable/wallet" />
+    <item
+        android:id="@+id/supportFragment"
+        android:title="@string/titleItemSupportBottomNav"
+        android:icon="@drawable/support"/>
+    <item
+        android:id="@+id/faqFragment"
+        android:title="@string/titleItemFAQBottomNav"
+        android:icon="@drawable/faq"/>
+    <item
+        android:id="@+id/settingsFragment"
+        android:title="@string/titleItemSettingsBottomNav"
+        android:icon="@drawable/settings"/>
+</menu>

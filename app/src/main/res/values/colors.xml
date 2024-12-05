@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#1AFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="backgroundPurple">#E836C5</color>
+    <color name="orange">#FFC107</color>
+    <color name="red">#FF3D00</color>
+    <color name="green">#4CAF50</color>
+    <color name="blue">#1976D2</color>
+    <color name="facebook">#1877F2</color>
+    <color name="your_on_secondary_color">#000000</color>
+    <color name="semi_transparent_white">#1AFFFFFF</color>
+    <color name="colorPrimary">#FFC107</color>
+    <color name="colorPrimaryVariant">#FF3D00</color>
+    <color name="colorSecondary">#4CAF50</color>
+    <color name="colorOnPrimary">#1976D2</color>
+    <color name="colorOnSecondary">#1877F2</color>
+    <color name="startColor">#E7356F</color>
+    <color name="endColor">#F9A437</color>
+</resources>

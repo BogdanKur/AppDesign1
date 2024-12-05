@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="planet_width">200dp</dimen>
+    <dimen name="planet_height">200dp</dimen>
+    <dimen name="padding_top">16dp</dimen>
+    <dimen name="padding_horizontal">12dp</dimen>
+    <dimen name="padding_vertical">7dp</dimen>
+    <dimen name="margin_top">50dp</dimen>
+    <dimen name="margin_topLl">15dp</dimen>
+    <dimen name="margin_topPlanet">15dp</dimen>
+    <dimen name="text_size_small">9sp</dimen>
+    <dimen name="text_size_large">19sp</dimen>
+    <dimen name="text_size_medium">13sp</dimen>
+    <dimen name="margin_top_login">110dp</dimen>
+    <dimen name="text_size_change_password">16sp</dimen>
+    <dimen name="margin_top_tvs">7dp</dimen>
+    <dimen name="bottom_sheet">250dp</dimen>
+    <dimen name="margin_top_main">35dp</dimen>
+    <dimen name="margin_top_name">24dp</dimen>
+    <dimen name="margin_top_statistics">10dp</dimen>
+    <dimen name="margin_end_days">7dp</dimen>
+    <dimen name="button_height_days">18dp</dimen>
+    <dimen name="margin_top_times">4dp</dimen>
+    <dimen name="play_button">140dp</dimen>
+    <dimen name="up_down_height">90dp</dimen>
+    <dimen name="constraint_top">28dp</dimen>
+    <dimen name="media_width">90dp</dimen>
+    <dimen name="media_height">80dp</dimen>
+    <dimen name="media_margin_top">24dp</dimen>
+    <dimen name="media_margin_start">12dp</dimen>
+</resources>
