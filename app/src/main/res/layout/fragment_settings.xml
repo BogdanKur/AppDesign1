@@ -492,7 +492,7 @@
                         android:id="@+id/tvRussianLang"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Russian"
+                        android:text="@string/tvRussian"
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -500,7 +500,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Русский"
+                        android:text="@string/tvRus"
                         android:textColor="@color/white"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -508,6 +508,7 @@
                         android:layout_marginBottom="12dp"/>
 
                     <FrameLayout
+                        android:visibility="gone"
                         android:id="@+id/flCurrent2"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
@@ -539,7 +540,7 @@
                         android:id="@+id/tvGermanLang"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="German"
+                        android:text="@string/tvGerman"
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -547,7 +548,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Deutsch"
+                        android:text="@string/tvDeutsch"
                         android:textColor="@color/white"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -555,6 +556,7 @@
                         android:layout_marginBottom="12dp"/>
 
                     <FrameLayout
+                        android:visibility="gone"
                         android:id="@+id/flCurrent3"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
@@ -587,7 +589,7 @@
                         android:id="@+id/tvFrenchLang"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="French"
+                        android:text="@string/tvFrench"
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -595,7 +597,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Française"
+                        android:text="@string/tvFran_aise"
                         android:textColor="@color/white"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -603,6 +605,7 @@
                         android:layout_marginBottom="12dp"/>
 
                     <FrameLayout
+                        android:visibility="gone"
                         android:id="@+id/flCurrent4"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
@@ -634,7 +637,7 @@
                         android:id="@+id/tvSpanishLang"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Spanish"
+                        android:text="@string/tvSpanish"
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -642,7 +645,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Española"
+                        android:text="@string/tvEspaola"
                         android:textColor="@color/white"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -650,6 +653,7 @@
                         android:layout_marginBottom="12dp"/>
 
                     <FrameLayout
+                        android:visibility="gone"
                         android:id="@+id/flCurrent5"
                         android:layout_width="24dp"
                         android:layout_height="24dp"

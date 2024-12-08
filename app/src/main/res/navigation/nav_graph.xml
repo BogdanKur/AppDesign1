@@ -61,4 +61,10 @@
         tools:layout="@layout/fragment_settings">
 
     </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.appdesign.ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+
+    </fragment>
 </navigation>

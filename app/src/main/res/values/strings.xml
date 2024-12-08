@@ -76,4 +76,13 @@
     <string name="tvSpecifyYourGender">Specify your gender</string>
     <string name="tvChooseLanguage">Choose language</string>
     <string name="tvEnglish">English</string>
+    <string name="tvRussian">Russian</string>
+    <string name="tvRus">Русский</string>
+    <string name="tvGerman">German</string>
+    <string name="tvDeutsch">Deutsch</string>
+    <string name="tvFrench">French</string>
+    <string name="tvFran_aise">Française</string>
+    <string name="tvSpanish">Spanish</string>
+    <string name="tvEspaola">Española</string>
+    <string name="tvMyProfile">My profile</string>
 </resources>
