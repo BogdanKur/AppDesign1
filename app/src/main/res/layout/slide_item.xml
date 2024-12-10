@@ -10,15 +10,15 @@
         android:scaleType="centerCrop"
         android:clipToOutline="true"/>
     <TextView
-        android:padding="5dp"
+        android:padding="@dimen/_5dp"
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|start"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/_16dp"
         android:text="@string/tvCrypto"
         android:textColor="@color/white"
-        android:textSize="12sp"
+        android:textSize="@dimen/_12sp"
         android:background="@drawable/button_reg_auth_background" />
     <LinearLayout
         android:layout_gravity="bottom|start"
@@ -30,19 +30,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|start"
-            android:layout_margin="8dp"
+            android:layout_margin="@dimen/_8dp"
             android:text="12 November, 2024"
             android:textColor="#B2FFFFFF"
-            android:textSize="14sp"/>
+            android:textSize="@dimen/_14sp"/>
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|start"
-            android:layout_margin="8dp"
+            android:layout_margin="@dimen/_8dp"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut?"
             android:textColor="#FFFFFF"
-            android:textSize="16sp"/>
+            android:textSize="@dimen/_16sp"/>
     </LinearLayout>
 
 </FrameLayout>

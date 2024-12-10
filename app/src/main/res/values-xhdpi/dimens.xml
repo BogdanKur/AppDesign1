@@ -8,9 +8,9 @@
     <dimen name="margin_top">35dp</dimen>
     <dimen name="margin_topLl">15dp</dimen>
     <dimen name="margin_topPlanet">15dp</dimen>
-    <dimen name="text_size_small">9sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
     <dimen name="text_size_large">19sp</dimen>
-    <dimen name="text_size_medium">13sp</dimen>
+    <dimen name="text_size_medium">15sp</dimen>
     <dimen name="margin_top_login">100dp</dimen>
     <dimen name="text_size_change_password">16sp</dimen>
     <dimen name="margin_top_tvs">12dp</dimen>
@@ -28,4 +28,7 @@
     <dimen name="media_height">75dp</dimen>
     <dimen name="media_margin_top">24dp</dimen>
     <dimen name="media_margin_start">12dp</dimen>
+    <dimen name="new_slide_height">150dp</dimen>
+    <dimen name="promo_height">250dp</dimen>
+    <dimen name="account_padding">5dp</dimen>
 </resources>

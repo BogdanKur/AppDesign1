@@ -1,8 +1,7 @@
-package com.example.appdesign
+package com.example.appdesign.fragment
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +10,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.appdesign.R
 import com.example.appdesign.databinding.FragmentFAQBinding
 
 class FAQFragment : Fragment() {
@@ -27,10 +27,12 @@ class FAQFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentFAQBinding.inflate(inflater, container, false)
-        val view = binding.root
-        val navController = findNavController()
-        binding.bottomNavigationView.setupWithNavController(navController)
+        return inflater.inflate(R.layout.fragment_f_a_q, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        _binding = FragmentFAQBinding.bind(view)
 
         binding.openQuestionOne.setOnClickListener {
             isOpen1 = openQuestionAnswer(binding.openQuestionOne, binding.questionAnswer1, isOpen1)
@@ -50,9 +52,6 @@ class FAQFragment : Fragment() {
         binding.openQuestionSix.setOnClickListener {
             isOpen6 = openQuestionAnswer(binding.openQuestionSix, binding.questionAnswer6, isOpen6)
         }
-
-
-        return view
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")
@@ -68,12 +67,6 @@ class FAQFragment : Fragment() {
             button.setImageDrawable(caretDownDrawable)
             return false
         }
-    }
-
-
-    override fun onResume() {
-        super.onResume()
-        binding.bottomNavigationView.setSelectedItemId(R.id.faqFragment)
     }
 
 }

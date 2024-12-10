@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llConfirmAction"
+    app:layout_constraintTop_toBottomOf="@id/frameLayout11"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_app"
+    android:padding="@dimen/_15dp">
+    <LinearLayout
+        android:layout_marginHorizontal="@dimen/_15dp"
+        android:layout_marginTop="@dimen/_150dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvConfirmAction"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sp"/>
+        <TextView
+            android:layout_marginTop="@dimen/_15dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvYouWillLoseImportant"
+            android:layout_gravity="center"
+            android:textColor="#B2FFFFFF"
+            android:textSize="@dimen/_14sp"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/materialButtonCancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="@string/tvCancel"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_16sp"
+                android:textColor="@color/white"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_background_settings_change"/>
+        </FrameLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButtonTurnOff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/tvTurnItOff"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_16sp"
+            android:textColor="#F4965E"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.appdesign
+package com.example.appdesign.fragment
 
 import android.os.Bundle
 import android.os.Handler
@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
+import com.example.appdesign.R
 import com.example.appdesign.databinding.FragmentWelcomePageBinding
 
 
@@ -20,22 +21,16 @@ class WelcomePageFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentWelcomePageBinding.inflate(inflater, container, false)
-        val view = binding.root
+        return inflater.inflate(R.layout.fragment_welcome_page, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        _binding = FragmentWelcomePageBinding.bind(view)
         val navController = findNavController()
         Handler(Looper.getMainLooper()).postDelayed({
-            val navOptions = navOptions {
-                anim {
-                    enter = R.anim.fade_in
-                    exit = R.anim.fade_out
-                    popEnter = R.anim.fade_in
-                    popExit = R.anim.fade_out
-                }
-            }
-            navController.navigate(R.id.action_welcomePageFragment_to_singUpFragment, null, navOptions)
+            navController.navigate(R.id.action_welcomePageFragment_to_singUpFragment)
         }, 2000)
-
-        return view
     }
 
 }

@@ -9,12 +9,12 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="@android:color/transparent"
-        android:padding="16dp">
+        android:padding="@dimen/_16dp">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="@dimen/_70dp"
+            android:layout_height="@dimen/_70dp"
             android:layout_gravity="start"
             android:src="@drawable/test_image"
             android:scaleType="centerCrop"
@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="@dimen/_16dp"
             android:background="@android:color/transparent">
 
             <TextView
@@ -34,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tvCrypto"
-                android:textSize="12sp"
+                android:textSize="@dimen/_12sp"
                 android:textColor="#80FFFFFF"/>
 
             <TextView
@@ -43,20 +43,20 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut?"
-                android:textSize="16sp"/>
+                android:textSize="@dimen/_16sp"/>
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="12 November, 2024"
-                android:textSize="14sp"
+                android:textSize="@dimen/_14sp"
                 android:textColor="#B2FFFFFF"/>
         </LinearLayout>
     </LinearLayout>
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="@dimen/_1dp"
         android:background="#33FFFFFF"/>
 </LinearLayout>
 

@@ -30,4 +30,5 @@
     <dimen name="new_slide_height">200dp</dimen>
     <dimen name="promo_height">285dp</dimen>
     <dimen name="account_padding">12dp</dimen>
+    <dimen name="promo_profile_height">220dp</dimen>
 </resources>

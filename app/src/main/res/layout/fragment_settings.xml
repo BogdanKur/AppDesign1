@@ -6,15 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_app"
-    tools:context=".SettingsFragment">
+    tools:context=".fragment.SettingsFragment">
 
     <FrameLayout
         android:id="@+id/frameLayout11"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="@dimen/_32dp"
+        android:layout_height="@dimen/_32dp"
         android:layout_gravity="start"
-        android:layout_marginTop="@dimen/media_margin_top"
-        android:layout_marginHorizontal="@dimen/padding_horizontal"
+        android:layout_marginTop="@dimen/_24dp"
+        android:layout_marginHorizontal="@dimen/_15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
@@ -32,11 +32,11 @@
     </FrameLayout>
 
     <FrameLayout
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="@dimen/_32dp"
+        android:layout_height="@dimen/_32dp"
         android:layout_gravity="end"
-        android:layout_marginTop="@dimen/media_margin_top"
-        android:layout_marginHorizontal="@dimen/padding_horizontal"
+        android:layout_marginTop="@dimen/_32dp"
+        android:layout_marginHorizontal="@dimen/_15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
@@ -56,638 +56,14 @@
             android:src="@drawable/profile_photo" />
     </FrameLayout>
 
-    <LinearLayout
-        android:id="@+id/llConfirmAction"
-        android:visibility="gone"
-        android:layout_marginHorizontal="@dimen/padding_horizontal"
-        android:layout_marginTop="@dimen/planet_height"
-        app:layout_constraintTop_toBottomOf="@id/frameLayout11"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/change_notification_background"
-        tools:ignore="MissingConstraints"
-        android:padding="@dimen/padding_horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tvConfirmAction"
-            android:layout_gravity="center"
-            android:textColor="@color/white"
-            android:textSize="20sp"/>
-        <TextView
-            android:layout_marginTop="@dimen/padding_horizontal"
-            android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tvYouWillLoseImportant"
-            android:layout_gravity="center"
-            android:textColor="#B2FFFFFF"
-            android:textSize="14sp"/>
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/materialButtonCancel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:text="@string/tvCancel"
-                android:textAllCaps="false"
-                android:textSize="16sp"
-                android:textColor="@color/white"/>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/button_background_settings_change"/>
-        </FrameLayout>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/materialButtonTurnOff"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:text="@string/tvTurnItOff"
-            android:textAllCaps="false"
-            android:textSize="16sp"
-            android:textColor="#F4965E"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:visibility="gone"
-        android:id="@+id/llEditProfile"
-        android:layout_marginHorizontal="@dimen/padding_horizontal"
-        android:layout_marginTop="@dimen/padding_horizontal"
-        app:layout_constraintTop_toBottomOf="@id/frameLayout11"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@android:color/transparent"
-        tools:ignore="MissingConstraints"
-        android:padding="@dimen/padding_horizontal">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/materialButtonBackToSettings"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:background="@drawable/arrowleft"/>
-            <TextView
-                android:layout_marginStart="90dp"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="@string/tvEditProfile"
-                android:textColor="@color/white"
-                android:textSize="20sp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/llEditText"
-            app:layout_constraintTop_toBottomOf="@id/llGoogleAppleFacebook"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_topLl"
-            android:orientation="vertical">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:textSize="@dimen/text_size_medium"
-                android:id="@+id/etUsername"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/padding_horizontal"
-                android:background="@drawable/edit_text_background"
-                android:hint="@string/etUsername"
-                android:paddingHorizontal="@dimen/padding_top"
-                android:paddingVertical="@dimen/padding_vertical"
-                android:textColor="#B2FFFFFF"
-                android:textColorHint="#B2FFFFFF" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:textSize="@dimen/text_size_medium"
-                android:id="@+id/etEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/padding_horizontal"
-                android:background="@drawable/edit_text_background"
-                android:hint="@string/tvLogin"
-                android:paddingHorizontal="@dimen/padding_top"
-                android:paddingVertical="@dimen/padding_vertical"
-                android:textColor="#B2FFFFFF"
-                android:textColorHint="#B2FFFFFF" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:textSize="@dimen/text_size_medium"
-                android:id="@+id/etPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/edit_text_background"
-                android:hint="@string/etEmail"
-                android:paddingHorizontal="@dimen/padding_top"
-                android:paddingVertical="@dimen/padding_vertical"
-                android:textColor="#B2FFFFFF"
-                android:textColorHint="#B2FFFFFF" />
-        </LinearLayout>
-        <TextView
-            android:layout_marginTop="@dimen/padding_horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tvSpecifyYourGender"
-            android:textColor="#B2FFFFFF"/>
-        <RadioGroup
-            android:layout_marginTop="4dp"
-            android:theme="@style/AppSearchViewStyle"
-            android:id="@+id/male_group"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/radio_male"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tvMale"
-                android:textColor="@color/white"
-                android:button="@drawable/custom_radio_button"
-                android:layout_marginEnd="15dp"
-                android:checked="true"/>
-
-            <RadioButton
-                android:id="@+id/radio_female"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tvFemale"
-                android:textColor="#80FFFFFF"
-                android:button="@drawable/custom_radio_button"/>
-        </RadioGroup>
-
-        <FrameLayout
-            android:layout_marginTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/materialButtonSaveChangeProfile"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:text="@string/save"
-                android:textAllCaps="false"
-                android:textSize="16sp"
-                android:textColor="@color/white"/>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/button_background_settings_change"/>
-        </FrameLayout>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/materialButtonCancelChangeProfile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:text="@string/tvCancel"
-            android:textAllCaps="false"
-            android:textSize="16sp"
-            android:textColor="#F4965E"/>
-    </LinearLayout>
-
-    <FrameLayout
-        android:visibility="gone"
-        android:layout_marginTop="@dimen/padding_horizontal"
-        android:id="@+id/changePassword"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bottom_sheet"
-        app:layout_constraintTop_toBottomOf="@id/frameLayout11"
-        tools:ignore="MissingConstraints">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:id="@+id/llChangePassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginStart="@dimen/padding_horizontal">
-                <com.google.android.material.button.MaterialButton
-                    android:layout_gravity="top"
-                    android:id="@+id/materialButtonBackToSettings2"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:background="@drawable/arrowleft"/>
-                <TextView
-                    android:layout_marginStart="70dp"
-                    android:layout_marginTop="@dimen/padding_horizontal"
-                    android:id="@+id/tvChangePassword"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:text="@string/tvChangePassword"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/text_size_change_password"
-                    tools:ignore="MissingConstraints" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/ll1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_topLl"
-                android:orientation="vertical"
-                android:layout_marginHorizontal="@dimen/padding_horizontal"
-                app:layout_constraintTop_toBottomOf="@id/llChangePassword">
-
-                <FrameLayout
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/padding_horizontal">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etNewPassword"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/edit_text_background"
-                        android:hint="@string/etNewPassword"
-                        android:paddingHorizontal="@dimen/padding_top"
-                        android:paddingVertical="@dimen/padding_vertical"
-                        android:textColor="#B2FFFFFF"
-                        android:textColorHint="#B2FFFFFF"
-                        android:textSize="@dimen/text_size_medium" />
-
-                    <ImageButton
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_gravity="center|end"
-                        android:layout_marginEnd="24dp"
-                        android:background="@drawable/eye" />
-                </FrameLayout>
-
-                <FrameLayout
-                    android:id="@+id/flRepeatPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/padding_top">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etRepeatPassword"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/edit_text_background"
-                        android:hint="@string/etRepeatPassword"
-                        android:paddingHorizontal="@dimen/padding_top"
-                        android:paddingVertical="@dimen/padding_vertical"
-                        android:textColor="#B2FFFFFF"
-                        android:textColorHint="#B2FFFFFF"
-                        android:textSize="@dimen/text_size_medium" />
-
-                    <ImageButton
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_gravity="center|end"
-                        android:layout_marginEnd="24dp"
-                        android:background="@drawable/eye_closed" />
-                </FrameLayout>
-
-                <RelativeLayout
-                    android:id="@+id/rl1"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    app:layout_constraintTop_toBottomOf="@id/flRepeatPassword"
-                    tools:ignore="MissingConstraints">
-
-                    <ImageButton
-                        android:id="@+id/btnSave"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginTop="0dp"
-                        android:background="@drawable/button_reg_auth_background" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:text="@string/save"
-                        android:textAllCaps="false"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/text_size_medium" />
-                </RelativeLayout>
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/materialButtonCancelChangePassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:text="@string/tvCancel"
-                    android:textAllCaps="false"
-                    android:textSize="16sp"
-                    android:textColor="#F4965E"/>
-            </LinearLayout>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </FrameLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:visibility="gone"
-        android:id="@+id/chooseLanguages"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        tools:ignore="MissingConstraints">
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:paddingHorizontal="@dimen/padding_horizontal"
-            android:paddingTop="@dimen/padding_horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/choose_lang"
-            tools:ignore="MissingConstraints">
-            <TextView
-                android:textSize="20sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:text="@string/tvChooseLanguage"
-                tools:ignore="MissingConstraints" />
-            <FrameLayout
-                android:id="@+id/flClose"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                tools:ignore="MissingConstraints">
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/materialButtonCloseChooseLanguage"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/transparent"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/x_circle"
-                    android:background="@android:color/transparent"/>
-            </FrameLayout>
-
-            <LinearLayout
-                android:layout_marginTop="@dimen/padding_horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintTop_toBottomOf="@id/flClose"
-                tools:ignore="MissingConstraints">
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/tvEnglishLang"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/tvEnglish"
-                        android:textColor="@color/white"
-                        android:textSize="16sp"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/tvEnglish"
-                        android:textColor="@color/white"
-                        android:textSize="13sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tvEnglishLang"
-                        android:layout_marginBottom="12dp"/>
-
-                    <FrameLayout
-                        android:id="@+id/flCurrent"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/materialButtonCurrent"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@android:color/transparent" />
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@android:color/transparent"
-                            android:src="@drawable/check" />
-                    </FrameLayout>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp">
-
-                    <TextView
-                        android:id="@+id/tvRussianLang"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/tvRussian"
-                        android:textColor="@color/white"
-                        android:textSize="16sp"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/tvRus"
-                        android:textColor="@color/white"
-                        android:textSize="12sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tvRussianLang"
-                        android:layout_marginBottom="12dp"/>
-
-                    <FrameLayout
-                        android:visibility="gone"
-                        android:id="@+id/flCurrent2"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/materialButtonCurrent2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@android:color/transparent" />
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@android:color/transparent"
-                            android:src="@drawable/check" />
-                    </FrameLayout>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp">
-
-                    <TextView
-                        android:id="@+id/tvGermanLang"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/tvGerman"
-                        android:textColor="@color/white"
-                        android:textSize="16sp"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/tvDeutsch"
-                        android:textColor="@color/white"
-                        android:textSize="12sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tvGermanLang"
-                        android:layout_marginBottom="12dp"/>
-
-                    <FrameLayout
-                        android:visibility="gone"
-                        android:id="@+id/flCurrent3"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/materialButtonCurrent3"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@android:color/transparent" />
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@android:color/transparent"
-                            android:src="@drawable/check" />
-                    </FrameLayout>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp">
-
-                    <TextView
-                        android:id="@+id/tvFrenchLang"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/tvFrench"
-                        android:textColor="@color/white"
-                        android:textSize="16sp"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/tvFran_aise"
-                        android:textColor="@color/white"
-                        android:textSize="12sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tvFrenchLang"
-                        android:layout_marginBottom="12dp"/>
-
-                    <FrameLayout
-                        android:visibility="gone"
-                        android:id="@+id/flCurrent4"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/materialButtonCurrent4"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@android:color/transparent" />
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@android:color/transparent"
-                            android:src="@drawable/check" />
-                    </FrameLayout>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp">
-
-                    <TextView
-                        android:id="@+id/tvSpanishLang"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/tvSpanish"
-                        android:textColor="@color/white"
-                        android:textSize="16sp"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/tvEspaola"
-                        android:textColor="@color/white"
-                        android:textSize="12sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tvSpanishLang"
-                        android:layout_marginBottom="12dp"/>
-
-                    <FrameLayout
-                        android:visibility="gone"
-                        android:id="@+id/flCurrent5"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/materialButtonCurrent5"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@android:color/transparent" />
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@android:color/transparent"
-                            android:src="@drawable/check" />
-                    </FrameLayout>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </LinearLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clAllViews"
         android:visibility="visible"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/frameLayout11"
-        android:layout_marginHorizontal="@dimen/padding_horizontal"
-        android:layout_marginTop="@dimen/padding_horizontal"
+        android:layout_marginHorizontal="@dimen/_15dp"
+        android:layout_marginTop="@dimen/_15dp"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
@@ -695,14 +71,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginBottom="12dp">
+            android:layout_marginBottom="@dimen/_12dp">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/user_rounded"/>
             <TextView
                 android:textColor="@color/white"
-                android:textSize="16sp"
+                android:textSize="@dimen/_16sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tvAccount"/>
@@ -717,7 +93,7 @@
                 android:background="@drawable/button_background_days"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/account_padding">
+                android:padding="@dimen/_12dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -728,16 +104,16 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <FrameLayout
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="@dimen/_24dp"
+                    android:layout_height="@dimen/_24dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/materialButtonEditProfile"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="@dimen/_24dp"
+                        android:layout_height="@dimen/_24dp"
                         android:background="@android:color/transparent" />
 
                     <ImageView
@@ -748,11 +124,11 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="@dimen/_5dp"
                 android:background="@drawable/button_background_days"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/account_padding">
+                android:padding="@dimen/_12dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -762,15 +138,15 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
                 <FrameLayout
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="@dimen/_24dp"
+                    android:layout_height="@dimen/_24dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/materialButtonChangePassword"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="@dimen/_24dp"
+                        android:layout_height="@dimen/_24dp"
                         android:background="@android:color/transparent" />
                     <ImageView
                         android:layout_width="wrap_content"
@@ -779,11 +155,11 @@
                 </FrameLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="@dimen/_5dp"
                 android:background="@drawable/button_background_days"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/account_padding">
+                android:padding="@dimen/_12dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -793,16 +169,16 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
                 <FrameLayout
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="@dimen/_24dp"
+                    android:layout_height="@dimen/_24dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/materialButtonLanguage"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="@dimen/_24dp"
+                        android:layout_height="@dimen/_24dp"
                         android:background="@android:color/transparent" />
                     <ImageView
                         android:layout_width="wrap_content"
@@ -817,14 +193,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="@dimen/padding_horizontal">
+            android:layout_marginTop="@dimen/_15dp">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/speakerhigh"/>
             <TextView
                 android:textColor="@color/white"
-                android:textSize="16sp"
+                android:textSize="@dimen/_16sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tvNotification"/>
@@ -837,7 +213,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/_8dp"
                 android:background="@android:color/transparent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -862,7 +238,7 @@
                     android:track="@drawable/switch_background"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="@dimen/_12dp"
                 android:background="@android:color/transparent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -887,7 +263,7 @@
                     android:track="@drawable/switch_background"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="@dimen/_12dp"
                 android:background="@android:color/transparent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -914,11 +290,11 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/promo_height"
+            android:layout_height="@dimen/_285dp"
             app:layout_constraintTop_toBottomOf="@id/llNotification"
-            android:layout_marginTop="@dimen/padding_horizontal"
+            android:layout_marginTop="@dimen/_15dp"
             android:background="@drawable/promotion_background"
-            android:padding="@dimen/padding_horizontal">
+            android:padding="@dimen/_15dp">
             <ImageView
                 android:id="@+id/ivWallet"
                 android:layout_width="wrap_content"
@@ -935,43 +311,43 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/_16sp"
                     android:text="@string/TvSendYourReferralCode"
-                    android:layout_marginBottom="5dp"/>
+                    android:layout_marginBottom="@dimen/_5dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#FFFFFF"
-                    android:textSize="13sp"
+                    android:textSize="@dimen/_15sp"
                     android:text="@string/tvYouLlBothReceive50"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#B2FFFFFF"
-                    android:textSize="13sp"
+                    android:textSize="@dimen/_15sp"
                     android:text="@string/tvYouForYourFriend"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#B2FFFFFF"
-                    android:textSize="13sp"
+                    android:textSize="@dimen/_15sp"
                     android:text="@string/TvYourFriendForSigningUp"/>
                 <TextView
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="@dimen/_5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#B2FFFFFF"
-                    android:textSize="14sp"
+                    android:textSize="@dimen/_15sp"
                     android:text="@string/tvYouWillAlsoEarn10"/>
                 <TextView
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="@dimen/_5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#FFFFFF"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/_16sp"
                     android:text="@string/tvStartEarningTogetherWith"/>
                 <FrameLayout
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="@dimen/_5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
@@ -979,9 +355,9 @@
                         android:layout_height="wrap_content"
                         android:text="xx11245"
                         android:layout_gravity="start|center"
-                        android:layout_marginStart="@dimen/padding_horizontal"
+                        android:layout_marginStart="@dimen/_15dp"
                         android:textColor="#FFFFFF"
-                        android:textSize="16sp"/>
+                        android:textSize="@dimen/_16sp"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -990,25 +366,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end|center"
-                        android:layout_marginEnd="@dimen/padding_horizontal"
+                        android:layout_marginEnd="@dimen/_15dp"
                         android:src="@drawable/bookmarkssimple"/>
                 </FrameLayout>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/menu_bottom_navigation_view"
-        app:labelVisibilityMode="labeled"
-        tools:ignore="MissingConstraints"
-        android:background="#1AFFFFFF"
-        app:itemIconTint="@drawable/bottom_nav_item_color"
-        app:itemTextColor="@drawable/bottom_nav_item_color"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

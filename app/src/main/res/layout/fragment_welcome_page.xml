@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background_app"
-    tools:context=".WelcomePageFragment">
+    tools:context=".fragment.WelcomePageFragment">
 
     <ImageView
         app:layout_constraintBottom_toBottomOf="parent"
@@ -14,8 +14,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/imageView"
-        android:layout_width="358dp"
-        android:layout_height="323dp"
+        android:layout_width="@dimen/_358dp"
+        android:layout_height="@dimen/_323dp"
         android:scaleType="centerCrop"
         android:src="@drawable/welcome_item" />
 

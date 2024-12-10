@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llEditProfile"
+    app:layout_constraintTop_toBottomOf="@id/frameLayout11"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/background_app"
+    tools:ignore="MissingConstraints"
+    android:padding="@dimen/padding_horizontal">
+
+    <FrameLayout
+        android:id="@+id/flTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <FrameLayout
+            android:layout_width="@dimen/_32dp"
+            android:layout_height="@dimen/_32dp"
+            android:layout_gravity="start"
+            tools:ignore="MissingConstraints">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMenuOpen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/hamburger_menu"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="@dimen/_32dp"
+            android:layout_height="@dimen/_32dp"
+            android:layout_gravity="end"
+            tools:ignore="MissingConstraints">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnProfilePhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_image"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_photo" />
+        </FrameLayout>
+    </FrameLayout>
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButtonBackToSettings"
+            android:layout_width="@dimen/_24dp"
+            android:layout_height="@dimen/_24dp"
+            android:background="@drawable/arrowleft"/>
+        <TextView
+            android:layout_marginStart="@dimen/_90dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/tvEditProfile"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llEditText"
+        app:layout_constraintTop_toBottomOf="@id/llGoogleAppleFacebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_28dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:textSize="@dimen/_16sp"
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_15dp"
+            android:background="@drawable/edit_text_background"
+            android:hint="@string/etUsername"
+            android:paddingHorizontal="@dimen/_22dp"
+            android:paddingVertical="@dimen/_18dp"
+            android:textColor="#B2FFFFFF"
+            android:textColorHint="#B2FFFFFF" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:textSize="@dimen/_16dp"
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_15dp"
+            android:background="@drawable/edit_text_background"
+            android:hint="@string/tvLogin"
+            android:paddingHorizontal="@dimen/_22dp"
+            android:paddingVertical="@dimen/_18dp"
+            android:textColor="#B2FFFFFF"
+            android:textColorHint="#B2FFFFFF" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:textSize="@dimen/_16sp"
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
+            android:hint="@string/etEmail"
+            android:paddingHorizontal="@dimen/_22dp"
+            android:paddingVertical="@dimen/_18dp"
+            android:textColor="#B2FFFFFF"
+            android:textColorHint="#B2FFFFFF" />
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="@dimen/_15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvSpecifyYourGender"
+        android:textColor="#B2FFFFFF"/>
+    <RadioGroup
+        android:layout_marginTop="@dimen/_4dp"
+        android:theme="@style/AppSearchViewStyle"
+        android:id="@+id/male_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvMale"
+            android:textColor="@color/white"
+            android:button="@drawable/custom_radio_button"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/radio_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvFemale"
+            android:textColor="#80FFFFFF"
+            android:button="@drawable/custom_radio_button"/>
+    </RadioGroup>
+
+    <FrameLayout
+        android:layout_marginTop="@dimen/_5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButtonSaveChangeProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_16sp"
+            android:textColor="@color/white"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_background_settings_change"/>
+    </FrameLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonCancelChangeProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="@string/tvCancel"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_16sp"
+        android:textColor="#F4965E"/>
+</LinearLayout>

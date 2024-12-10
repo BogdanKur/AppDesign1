@@ -6,15 +6,15 @@
     android:background="@drawable/background_app"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SupportFragment">
+    tools:context=".fragment.SupportFragment">
 
     <FrameLayout
         android:id="@+id/frameLayout11"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="@dimen/_32dp"
+        android:layout_height="@dimen/_32dp"
         android:layout_gravity="start"
-        android:layout_marginTop="@dimen/media_margin_top"
-        android:layout_marginHorizontal="@dimen/padding_horizontal"
+        android:layout_marginTop="@dimen/_24dp"
+        android:layout_marginHorizontal="@dimen/_15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
@@ -32,11 +32,11 @@
     </FrameLayout>
 
     <FrameLayout
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="@dimen/_32dp"
+        android:layout_height="@dimen/_32dp"
         android:layout_gravity="end"
-        android:layout_marginTop="@dimen/media_margin_top"
-        android:layout_marginHorizontal="@dimen/padding_horizontal"
+        android:layout_marginTop="@dimen/_24dp"
+        android:layout_marginHorizontal="@dimen/_15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
@@ -60,9 +60,9 @@
         android:id="@+id/llEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/padding_horizontal"
+        android:layout_marginTop="@dimen/_15dp"
         android:orientation="horizontal"
-        android:layout_marginHorizontal="@dimen/padding_horizontal"
+        android:layout_marginHorizontal="@dimen/_15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/frameLayout11"
         tools:ignore="MissingConstraints">
@@ -71,7 +71,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/button_email" />
         <TextView
-            android:layout_marginStart="@dimen/padding_horizontal"
+            android:layout_marginStart="@dimen/_15dp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -83,8 +83,8 @@
         android:id="@+id/rvMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/padding_horizontal"
-        android:layout_marginTop="@dimen/margin_top"
+        android:layout_marginHorizontal="@dimen/_15dp"
+        android:layout_marginTop="@dimen/_50dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,7 +97,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/llEmail"
-        android:layout_marginTop="@dimen/new_slide_height"
+        android:layout_marginTop="@dimen/_200dp"
         tools:ignore="MissingConstraints">
         <ImageView
             android:id="@+id/ivNoMessage"
@@ -111,8 +111,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="How can I help you?"
-            android:layout_marginTop="@dimen/padding_horizontal"
-            android:textSize="20sp"
+            android:layout_marginTop="@dimen/_15dp"
+            android:textSize="@dimen/_20sp"
             android:textColor="@color/white"
             app:layout_constraintTop_toBottomOf="@id/ivNoMessage"
             app:layout_constraintStart_toStartOf="parent"
@@ -120,16 +120,16 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
     <LinearLayout
-        android:paddingVertical="@dimen/padding_horizontal"
+        android:paddingVertical="@dimen/_15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="#33FFFFFF"
-        android:paddingHorizontal="@dimen/padding_horizontal"
-        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        android:paddingHorizontal="@dimen/_15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints">
         <com.google.android.material.textfield.TextInputEditText
-            android:textSize="16sp"
+            android:textSize="@dimen/_16sp"
             android:layout_gravity="center"
             android:background="@android:color/transparent"
             android:layout_width="0dp"
@@ -139,7 +139,7 @@
             android:textColorHint="#B2FFFFFF"
             android:hint="@string/etEnterMessage"/>
         <FrameLayout
-            android:layout_marginStart="@dimen/padding_horizontal"
+            android:layout_marginStart="@dimen/_15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ImageView
@@ -147,24 +147,11 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/send_message"/>
             <com.google.android.material.button.MaterialButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/_40dp"
+                android:layout_height="@dimen/_40dp"
                 android:background="@android:color/transparent"/>
         </FrameLayout>
 
     </LinearLayout>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/menu_bottom_navigation_view"
-        app:labelVisibilityMode="labeled"
-        tools:ignore="MissingConstraints"
-        android:background="#1AFFFFFF"
-        app:itemIconTint="@drawable/bottom_nav_item_color"
-        app:itemTextColor="@drawable/bottom_nav_item_color"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

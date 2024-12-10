@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:background="@drawable/background_app"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/container">
@@ -15,4 +16,16 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         app:defaultNavHost="true"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:visibility="gone"
+        android:id="@+id/bottomNavigationViews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/menu_bottom_navigation_view"
+        app:labelVisibilityMode="labeled"
+        android:background="#1AFFFFFF"
+        app:itemIconTint="@drawable/bottom_nav_item_color"
+        app:itemTextColor="@drawable/bottom_nav_item_color"/>
+
 </LinearLayout>

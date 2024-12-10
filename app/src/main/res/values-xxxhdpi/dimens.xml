@@ -28,4 +28,7 @@
     <dimen name="media_height">100dp</dimen>
     <dimen name="media_margin_top">24dp</dimen>
     <dimen name="media_margin_start">12dp</dimen>
+    <dimen name="new_slide_height">200dp</dimen>
+    <dimen name="promo_height">285dp</dimen>
+    <dimen name="account_padding">12dp</dimen>
 </resources>
