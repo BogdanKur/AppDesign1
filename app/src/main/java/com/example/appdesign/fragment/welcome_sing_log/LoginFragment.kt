@@ -1,14 +1,11 @@
-package com.example.appdesign.fragment
+package com.example.appdesign.fragment.welcome_sing_log
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.navOptions
 import com.example.appdesign.R
 import com.example.appdesign.databinding.FragmentLoginBinding
 
@@ -29,10 +26,12 @@ class LoginFragment : Fragment() {
         val navController = findNavController()
 
         binding.btnLogin.setOnClickListener {
-            navController.navigate(R.id.action_loginFragment_to_mainFragment)
+            val action = LoginFragmentDirections.actionLoginFragmentToMainFragment()
+            navController.navigate(action)
         }
         binding.btnForgotPassword.setOnClickListener {
-            navController.navigate(R.id.action_loginFragment_to_loginDialogFragment)
+            val action = LoginFragmentDirections.actionLoginFragmentToLoginDialogFragment()
+            navController.navigate(action)
         }
     }
 }

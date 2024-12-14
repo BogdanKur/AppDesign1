@@ -1,4 +1,4 @@
-package com.example.appdesign.fragment
+package com.example.appdesign.fragment.settings
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -26,13 +26,16 @@ class EditProfileFragment : Fragment() {
         _binding = FragmentEditProfileBinding.bind(view)
         val navController = findNavController()
         binding.materialButtonBackToSettings.setOnClickListener {
-            navController.navigate(R.id.action_editProfileFragment_to_settingsFragment)
+            val action = EditProfileFragmentDirections.actionEditProfileFragmentToSettingsFragment()
+            navController.navigate(action)
         }
         binding.materialButtonSaveChangeProfile.setOnClickListener {
-            navController.navigate(R.id.action_editProfileFragment_to_settingsFragment)
+            val action = EditProfileFragmentDirections.actionEditProfileFragmentToSettingsFragment()
+            navController.navigate(action)
         }
         binding.materialButtonCancelChangeProfile.setOnClickListener {
-            navController.navigate(R.id.action_editProfileFragment_to_settingsFragment)
+            val action = EditProfileFragmentDirections.actionEditProfileFragmentToSettingsFragment()
+            navController.navigate(action)
         }
     }
 

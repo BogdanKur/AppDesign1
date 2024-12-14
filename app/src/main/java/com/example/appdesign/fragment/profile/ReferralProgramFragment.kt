@@ -1,4 +1,4 @@
-package com.example.appdesign.fragment
+package com.example.appdesign.fragment.profile
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,25 +7,27 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.appdesign.R
-import com.example.appdesign.databinding.FragmentWithdrawalBinding
+import com.example.appdesign.databinding.FragmentReferralProgramBinding
 
-class WithdrawalFragment : Fragment() {
-    private var _binding: FragmentWithdrawalBinding? = null
+
+class ReferralProgramFragment : Fragment() {
+    private var _binding: FragmentReferralProgramBinding? =null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_withdrawal, container, false)
+        return inflater.inflate(R.layout.fragment_referral_program, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentWithdrawalBinding.bind(view)
+        _binding = FragmentReferralProgramBinding.bind(view)
         val navController = findNavController()
-        binding.materialButtonBackToProfileWithdrawal.setOnClickListener {
-            navController.navigate(R.id.action_withdrawalFragment_to_profileFragment)
+        binding.materialButtonBackToSettings.setOnClickListener {
+            val action = ReferralProgramFragmentDirections.actionReferralProgramFragmentToProfileFragment()
+            navController.navigate(action)
         }
     }
 

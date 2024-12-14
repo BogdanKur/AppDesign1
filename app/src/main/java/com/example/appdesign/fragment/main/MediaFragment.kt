@@ -1,4 +1,4 @@
-package com.example.appdesign.fragment
+package com.example.appdesign.fragment.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -25,7 +25,8 @@ class MediaFragment : Fragment() {
         _binding = FragmentMediaBinding.bind(view)
         val navController = findNavController()
         binding.btnMainBack.setOnClickListener {
-            navController.navigate(R.id.action_mediaFragment_to_mainFragment)
+            val action = MediaFragmentDirections.actionMediaFragmentToMainFragment()
+            navController.navigate(action)
         }
     }
 }

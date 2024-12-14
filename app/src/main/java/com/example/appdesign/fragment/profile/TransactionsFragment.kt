@@ -1,4 +1,4 @@
-package com.example.appdesign.fragment
+package com.example.appdesign.fragment.profile
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,26 +7,27 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.appdesign.R
-import com.example.appdesign.databinding.FragmentNewCurrentBinding
+import com.example.appdesign.databinding.FragmentTransactionsBinding
 
 
-class NewCurrentFragment : Fragment() {
-    private var _binding: FragmentNewCurrentBinding? = null
+class TransactionsFragment : Fragment() {
+    private var _binding: FragmentTransactionsBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_new_current, container, false)
+        return inflater.inflate(R.layout.fragment_transactions, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentNewCurrentBinding.bind(view)
+        _binding = FragmentTransactionsBinding.bind(view)
         val navController = findNavController()
-        binding.btnMainBackNewCurrent.setOnClickListener {
-            navController.navigate(R.id.action_newCurrentFragment_to_newFragment)
+        binding.materialButtonBackToProfileTransactions.setOnClickListener {
+            val action = TransactionsFragmentDirections.actionTransactionsFragmentToProfileFragment()
+            navController.navigate(action)
         }
     }
 }

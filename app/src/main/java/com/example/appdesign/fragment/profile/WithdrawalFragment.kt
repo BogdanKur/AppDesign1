@@ -1,4 +1,4 @@
-package com.example.appdesign.fragment
+package com.example.appdesign.fragment.profile
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,26 +7,27 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.appdesign.R
-import com.example.appdesign.databinding.FragmentTransactionsBinding
+import com.example.appdesign.databinding.FragmentWithdrawalBinding
 
-
-class TransactionsFragment : Fragment() {
-    private var _binding: FragmentTransactionsBinding? = null
+class WithdrawalFragment : Fragment() {
+    private var _binding: FragmentWithdrawalBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_transactions, container, false)
+        return inflater.inflate(R.layout.fragment_withdrawal, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentTransactionsBinding.bind(view)
+        _binding = FragmentWithdrawalBinding.bind(view)
         val navController = findNavController()
-        binding.materialButtonBackToProfileTransactions.setOnClickListener {
-            navController.navigate(R.id.action_transactionsFragment_to_profileFragment)
+        binding.materialButtonBackToProfileWithdrawal.setOnClickListener {
+            val action = WithdrawalFragmentDirections.actionWithdrawalFragmentToProfileFragment()
+            navController.navigate(action)
         }
     }
+
 }

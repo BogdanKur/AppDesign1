@@ -9,7 +9,7 @@
     android:paddingTop="@dimen/_22dp"
     android:paddingHorizontal="@dimen/_15dp"
     android:id="@+id/constraint"
-    tools:context=".fragment.SingUpFragment">
+    tools:context=".fragment.welcome_sing_log.SingUpFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"

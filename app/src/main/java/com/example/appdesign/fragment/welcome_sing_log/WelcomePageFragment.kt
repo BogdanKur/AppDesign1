@@ -1,4 +1,4 @@
-package com.example.appdesign.fragment
+package com.example.appdesign.fragment.welcome_sing_log
 
 import android.os.Bundle
 import android.os.Handler
@@ -8,7 +8,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.navOptions
 import com.example.appdesign.R
 import com.example.appdesign.databinding.FragmentWelcomePageBinding
 
@@ -29,7 +28,8 @@ class WelcomePageFragment : Fragment() {
         _binding = FragmentWelcomePageBinding.bind(view)
         val navController = findNavController()
         Handler(Looper.getMainLooper()).postDelayed({
-            navController.navigate(R.id.action_welcomePageFragment_to_singUpFragment)
+            val action = WelcomePageFragmentDirections.actionWelcomePageFragmentToSingUpFragment()
+            navController.navigate(action)
         }, 2000)
     }
 

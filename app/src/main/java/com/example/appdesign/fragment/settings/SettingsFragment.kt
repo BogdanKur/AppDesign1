@@ -1,15 +1,11 @@
-package com.example.appdesign.fragment
+package com.example.appdesign.fragment.settings
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.navOptions
-import androidx.navigation.ui.setupWithNavController
 import com.example.appdesign.R
 import com.example.appdesign.databinding.FragmentSettingsBinding
 
@@ -32,31 +28,28 @@ class SettingsFragment : Fragment() {
         }
         binding.switchPush.setOnClickListener {
             if(!binding.switchPush.isChecked) {
-                navController.navigate(R.id.action_settingsFragment_to_turnOffNotificationFragment)
+                val action = SettingsFragmentDirections.actionSettingsFragmentToTurnOffNotificationFragment()
+                navController.navigate(action)
             }
         }
 
         binding.materialButtonEditProfile.setOnClickListener {
-            navController.navigate(R.id.action_settingsFragment_to_editProfileFragment)
+            val action = SettingsFragmentDirections.actionSettingsFragmentToEditProfileFragment()
+            navController.navigate(action)
         }
 
         binding.materialButtonChangePassword.setOnClickListener {
-            navController.navigate(R.id.action_settingsFragment_to_changePasswordFragment)
+            val action = SettingsFragmentDirections.actionSettingsFragmentToChangePasswordFragment()
+            navController.navigate(action)
         }
 
         binding.materialButtonLanguage.setOnClickListener {
-            navController.navigate(R.id.action_settingsFragment_to_languageFragment)
+            val action = SettingsFragmentDirections.actionSettingsFragmentToLanguageFragment()
+            navController.navigate(action)
         }
         binding.btnProfilePhoto.setOnClickListener {
-            val navOptions = navOptions {
-                anim {
-                    enter = R.anim.fade_in
-                    exit = R.anim.fade_out
-                    popEnter = R.anim.fade_in
-                    popExit = R.anim.fade_out
-                }
-            }
-            navController.navigate(R.id.action_settingsFragment_to_profileFragment, null, navOptions)
+            val action = SettingsFragmentDirections.actionSettingsFragmentToProfileFragment()
+            navController.navigate(action)
         }
     }
 

@@ -1,21 +1,13 @@
-package com.example.appdesign.fragment
+package com.example.appdesign.fragment.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
 import androidx.activity.addCallback
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.navOptions
-import androidx.navigation.ui.setupWithNavController
-import com.example.appdesign.adapter.News
-import com.example.appdesign.adapter.NewsAdapter
-import com.example.appdesign.interfaces.NewsAdapterClickItem
 import com.example.appdesign.R
-import com.example.appdesign.adapter.ImageSliderAdapter
 import com.example.appdesign.databinding.FragmentMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -37,17 +29,24 @@ class MainFragment : Fragment() {
         bottomNav.visibility = View.VISIBLE
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) { }
         binding.rlMedia.setOnClickListener{
-            navController.navigate(R.id.action_mainFragment_to_mediaFragment)
+            val action = MainFragmentDirections.actionMainFragmentToMediaFragment()
+            navController.navigate(action)
         }
         binding.rlTask.setOnClickListener{
-            navController.navigate(R.id.action_mainFragment_to_tasksFragment)
+            val action = MainFragmentDirections.actionMainFragmentToTasksFragment()
+            navController.navigate(action)
         }
         binding.rlNew.setOnClickListener{
-            navController.navigate(R.id.action_mainFragment_to_newsFragment)
+            val action = MainFragmentDirections.actionMainFragmentToNewsFragment()
+            navController.navigate(action)
         }
         binding.btnProfilePhoto.setOnClickListener {
-            navController.navigate(R.id.action_mainFragment_to_profileFragment)
+            val action = MainFragmentDirections.actionMainFragmentToProfileFragment()
+            navController.navigate(action)
         }
+        val dataPoints = listOf(2f, 5f, 8f, 6f, 4f, 5f, 2f)
+        binding.lineChartView.setData(dataPoints)
+        binding.lineChartViewDown.setData(dataPoints)
     }
 
 }

@@ -18,4 +18,8 @@
     <color name="colorOnSecondary">#1877F2</color>
     <color name="startColor">#E7356F</color>
     <color name="endColor">#F9A437</color>
+
+
+    <color name="fff">#FA4347</color>
+    <color name="fffs">#17D921</color>
 </resources>

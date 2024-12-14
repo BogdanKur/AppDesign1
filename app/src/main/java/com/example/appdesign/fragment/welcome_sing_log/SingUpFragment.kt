@@ -1,4 +1,4 @@
-package com.example.appdesign.fragment
+package com.example.appdesign.fragment.welcome_sing_log
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.navOptions
 import com.example.appdesign.R
 import com.example.appdesign.databinding.FragmentSingUpBinding
 
@@ -26,10 +25,12 @@ class SingUpFragment : Fragment() {
         _binding = FragmentSingUpBinding.bind(view)
         val navController = findNavController()
         binding.btnRegistrate.setOnClickListener {
-            navController.navigate(R.id.action_singUpFragment_to_loginFragment)
+            val action = SingUpFragmentDirections.actionSingUpFragmentToLoginFragment()
+            navController.navigate(action)
         }
         binding.btnLogin.setOnClickListener {
-            navController.navigate(R.id.action_singUpFragment_to_loginFragment)
+            val action = SingUpFragmentDirections.actionSingUpFragmentToLoginFragment()
+            navController.navigate(action)
         }
     }
 

@@ -1,4 +1,4 @@
-package com.example.appdesign.fragment
+package com.example.appdesign.fragment.profile
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,25 +7,26 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.appdesign.R
-import com.example.appdesign.databinding.FragmentLanguageBinding
+import com.example.appdesign.databinding.FragmentProxySettingsBinding
 
-class LanguageFragment : Fragment() {
-    private var _binding: FragmentLanguageBinding? = null
+class ProxySettingsFragment : Fragment() {
+    private var _binding: FragmentProxySettingsBinding? =null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_language, container, false)
+        return inflater.inflate(R.layout.fragment_proxy_settings, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentLanguageBinding.bind(view)
+        _binding = FragmentProxySettingsBinding.bind(view)
         val navController = findNavController()
-        binding.materialButtonCloseChooseLanguage.setOnClickListener {
-            navController.navigate(R.id.action_languageFragment_to_settingsFragment)
+        binding.materialButtonBackToProfileSettings.setOnClickListener {
+            val action = ProxySettingsFragmentDirections.actionProxySettingsFragmentToProfileFragment()
+            navController.navigate(action)
         }
     }
 }

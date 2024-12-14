@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background_app"
-    tools:context=".fragment.EarningFragment">
+    tools:context=".fragment.earning.EarningFragment">
 
     <FrameLayout
         android:id="@+id/frameLayout11"

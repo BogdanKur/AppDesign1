@@ -1,4 +1,4 @@
-package com.example.appdesign.fragment
+package com.example.appdesign.fragment.faq
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -8,8 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
-import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.setupWithNavController
 import com.example.appdesign.R
 import com.example.appdesign.databinding.FragmentFAQBinding
 

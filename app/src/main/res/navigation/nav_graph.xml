@@ -6,7 +6,7 @@
     app:startDestination="@id/welcomePageFragment">
     <fragment
         android:id="@+id/welcomePageFragment"
-        android:name="com.example.appdesign.fragment.WelcomePageFragment"
+        android:name="com.example.appdesign.fragment.welcome_sing_log.WelcomePageFragment"
         tools:layout="@layout/fragment_welcome_page">
         <action
             android:id="@+id/action_welcomePageFragment_to_singUpFragment"
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/singUpFragment"
-        android:name="com.example.appdesign.fragment.SingUpFragment"
+        android:name="com.example.appdesign.fragment.welcome_sing_log.SingUpFragment"
         tools:layout="@layout/fragment_sing_up">
         <action
             android:id="@+id/action_singUpFragment_to_loginFragment"
@@ -37,7 +37,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.appdesign.fragment.LoginFragment"
+        android:name="com.example.appdesign.fragment.welcome_sing_log.LoginFragment"
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_mainFragment"
@@ -56,7 +56,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginDialogFragment"
-        android:name="com.example.appdesign.fragment.LoginDialogFragment"
+        android:name="com.example.appdesign.fragment.welcome_sing_log.LoginDialogFragment"
         tools:layout="@layout/fragment_login_dialog">
         <action
             android:id="@+id/action_loginDialogFragment_to_loginFragment"
@@ -69,7 +69,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.appdesign.fragment.MainFragment"
+        android:name="com.example.appdesign.fragment.main.MainFragment"
         tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_mainFragment_to_profileFragment"
@@ -102,7 +102,7 @@
     </fragment>
     <fragment
         android:id="@+id/mediaFragment"
-        android:name="com.example.appdesign.fragment.MediaFragment"
+        android:name="com.example.appdesign.fragment.main.MediaFragment"
         tools:layout="@layout/fragment_media">
         <action
             android:id="@+id/action_mediaFragment_to_mainFragment"
@@ -114,7 +114,7 @@
     </fragment>
     <fragment
         android:id="@+id/tasksFragment"
-        android:name="com.example.appdesign.fragment.TasksFragment"
+        android:name="com.example.appdesign.fragment.main.TasksFragment"
         tools:layout="@layout/fragment_tasks">
         <action
             android:id="@+id/action_tasksFragment_to_mainFragment"
@@ -126,7 +126,7 @@
     </fragment>
     <fragment
         android:id="@+id/newFragment"
-        android:name="com.example.appdesign.fragment.NewsFragment"
+        android:name="com.example.appdesign.fragment.main.NewsFragment"
         tools:layout="@layout/fragment_news">
         <action
             android:id="@+id/action_newFragment_to_mainFragment"
@@ -145,7 +145,7 @@
     </fragment>
     <fragment
         android:id="@+id/newCurrentFragment"
-        android:name="com.example.appdesign.fragment.NewCurrentFragment"
+        android:name="com.example.appdesign.fragment.main.NewCurrentFragment"
         tools:layout="@layout/fragment_news">
         <action
             android:id="@+id/action_newCurrentFragment_to_newFragment"
@@ -157,25 +157,25 @@
     </fragment>
     <fragment
         android:id="@+id/earningFragment"
-        android:name="com.example.appdesign.fragment.EarningFragment"
+        android:name="com.example.appdesign.fragment.earning.EarningFragment"
         tools:layout="@layout/fragment_earning">
 
     </fragment>
     <fragment
         android:id="@+id/supportFragment"
-        android:name="com.example.appdesign.fragment.SupportFragment"
+        android:name="com.example.appdesign.fragment.support.SupportFragment"
         tools:layout="@layout/fragment_support">
 
     </fragment>
     <fragment
         android:id="@+id/faqFragment"
-        android:name="com.example.appdesign.fragment.FAQFragment"
+        android:name="com.example.appdesign.fragment.faq.FAQFragment"
         tools:layout="@layout/fragment_f_a_q">
 
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.example.appdesign.fragment.SettingsFragment"
+        android:name="com.example.appdesign.fragment.settings.SettingsFragment"
         tools:layout="@layout/fragment_settings">
         <action
             android:id="@+id/action_settingsFragment_to_profileFragment"
@@ -215,7 +215,7 @@
     </fragment>
     <fragment
         android:id="@+id/turnOffNotificationFragment"
-        android:name="com.example.appdesign.fragment.TurnOffNotificationFragment"
+        android:name="com.example.appdesign.fragment.settings.TurnOffNotificationFragment"
         tools:layout="@layout/fragment_turn_off_notification">
         <action
             android:id="@+id/action_turnOffNotificationFragment_to_settingsFragment"
@@ -227,7 +227,7 @@
     </fragment>
     <fragment
         android:id="@+id/editProfileFragment"
-        android:name="com.example.appdesign.fragment.EditProfileFragment"
+        android:name="com.example.appdesign.fragment.settings.EditProfileFragment"
         tools:layout="@layout/fragment_edit_profile">
         <action
             android:id="@+id/action_editProfileFragment_to_settingsFragment"
@@ -239,7 +239,7 @@
     </fragment>
     <fragment
         android:id="@+id/changePasswordFragment"
-        android:name="com.example.appdesign.fragment.ChangePasswordFragment"
+        android:name="com.example.appdesign.fragment.settings.ChangePasswordFragment"
         tools:layout="@layout/fragment_change_password">
         <action
             android:id="@+id/action_changePasswordFragment_to_settingsFragment"
@@ -251,7 +251,7 @@
     </fragment>
     <fragment
         android:id="@+id/languageFragment"
-        android:name="com.example.appdesign.fragment.LanguageFragment"
+        android:name="com.example.appdesign.fragment.settings.LanguageFragment"
         tools:layout="@layout/fragment_language">
         <action
             android:id="@+id/action_languageFragment_to_settingsFragment"
@@ -263,7 +263,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.appdesign.fragment.ProfileFragment"
+        android:name="com.example.appdesign.fragment.profile.ProfileFragment"
         tools:layout="@layout/fragment_profile">
         <action
             android:id="@+id/action_profileFragment_to_referralProgramFragment"
@@ -303,7 +303,7 @@
     </fragment>
     <fragment
         android:id="@+id/referralProgramFragment"
-        android:name="com.example.appdesign.fragment.ReferralProgramFragment"
+        android:name="com.example.appdesign.fragment.profile.ReferralProgramFragment"
         tools:layout="@layout/fragment_referral_program">
         <action
             android:id="@+id/action_referralProgramFragment_to_profileFragment"
@@ -315,7 +315,7 @@
     </fragment>
     <fragment
         android:id="@+id/transactionsFragment"
-        android:name="com.example.appdesign.fragment.TransactionsFragment"
+        android:name="com.example.appdesign.fragment.profile.TransactionsFragment"
         tools:layout="@layout/fragment_transactions">
         <action
             android:id="@+id/action_transactionsFragment_to_profileFragment"
@@ -327,7 +327,7 @@
     </fragment>
     <fragment
         android:id="@+id/withdrawalFragment"
-        android:name="com.example.appdesign.fragment.WithdrawalFragment"
+        android:name="com.example.appdesign.fragment.profile.WithdrawalFragment"
         tools:layout="@layout/fragment_withdrawal">
         <action
             android:id="@+id/action_withdrawalFragment_to_profileFragment"
@@ -339,7 +339,7 @@
     </fragment>
     <fragment
         android:id="@+id/proxySettingsFragment"
-        android:name="com.example.appdesign.fragment.ProxySettingsFragment"
+        android:name="com.example.appdesign.fragment.profile.ProxySettingsFragment"
         tools:layout="@layout/fragment_proxy_settings">
         <action
             android:id="@+id/action_proxySettingsFragment_to_profileFragment"

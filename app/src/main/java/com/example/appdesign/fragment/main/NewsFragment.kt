@@ -1,4 +1,4 @@
-package com.example.appdesign.fragment
+package com.example.appdesign.fragment.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -42,13 +42,15 @@ class NewsFragment : Fragment(), NewsAdapterClickItem {
         adapter.submitList(images)
         binding.viewPager.adapter = adapter
         binding.btnMainBackNew.setOnClickListener {
-            navController.navigate(R.id.action_newFragment_to_mainFragment)
+            val action = NewsFragmentDirections.actionNewFragmentToMainFragment()
+            navController.navigate(action)
         }
     }
 
     override fun onButtonClick() {
         super.onButtonClick()
-        findNavController().navigate(R.id.action_newFragment_to_newCurrentFragment)
+        val action = NewsFragmentDirections.actionNewFragmentToNewCurrentFragment()
+        findNavController().navigate(action)
     }
 
 }

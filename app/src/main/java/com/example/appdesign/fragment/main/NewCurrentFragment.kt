@@ -1,34 +1,33 @@
-package com.example.appdesign.fragment
+package com.example.appdesign.fragment.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.DialogFragment
 import androidx.navigation.fragment.findNavController
 import com.example.appdesign.R
-import com.example.appdesign.databinding.FragmentLoginDialogBinding
+import com.example.appdesign.databinding.FragmentNewCurrentBinding
 
-class LoginDialogFragment : Fragment() {
-    private var _binding: FragmentLoginDialogBinding? = null
+
+class NewCurrentFragment : Fragment() {
+    private var _binding: FragmentNewCurrentBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_login_dialog, container, false)
+        return inflater.inflate(R.layout.fragment_new_current, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentLoginDialogBinding.bind(view)
+        _binding = FragmentNewCurrentBinding.bind(view)
         val navController = findNavController()
-        binding.btnSave.setOnClickListener {
-            navController.navigate(R.id.action_loginDialogFragment_to_loginFragment)
+        binding.btnMainBackNewCurrent.setOnClickListener {
+            val action = NewCurrentFragmentDirections.actionNewCurrentFragmentToNewFragment()
+            navController.navigate(action)
         }
     }
-
-
 }

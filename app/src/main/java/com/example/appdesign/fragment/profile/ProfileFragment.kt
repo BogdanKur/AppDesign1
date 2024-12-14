@@ -1,12 +1,10 @@
-package com.example.appdesign.fragment
+package com.example.appdesign.fragment.profile
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
 import androidx.navigation.fragment.findNavController
 import com.example.appdesign.R
 import com.example.appdesign.adapter.TransactionAdapter
@@ -33,23 +31,28 @@ class ProfileFragment : Fragment() {
         bottomNav.visibility = View.GONE
         adapter = TransactionAdapter()
         binding.materialButtonReferralProgram.setOnClickListener {
-            navController.navigate(R.id.action_profileFragment_to_referralProgramFragment)
+            val action = ProfileFragmentDirections.actionProfileFragmentToReferralProgramFragment()
+            navController.navigate(action)
         }
 
         binding.materialButtonTransactions.setOnClickListener {
-            navController.navigate(R.id.action_profileFragment_to_transactionsFragment)
+            val action = ProfileFragmentDirections.actionProfileFragmentToTransactionsFragment()
+            navController.navigate(action)
         }
 
         binding.materialButtonWithdrawal.setOnClickListener {
-            navController.navigate(R.id.action_profileFragment_to_withdrawalFragment)
+            val action = ProfileFragmentDirections.actionProfileFragmentToWithdrawalFragment()
+            navController.navigate(action)
         }
 
         binding.materialButtonProxySettings.setOnClickListener {
-            navController.navigate(R.id.action_profileFragment_to_proxySettingsFragment)
+            val action = ProfileFragmentDirections.actionProfileFragmentToProxySettingsFragment()
+            navController.navigate(action)
         }
 
         binding.materialButton2.setOnClickListener {
-            navController.navigate(R.id.action_profileFragment_to_mainFragment)
+            val action = ProfileFragmentDirections.actionProfileFragmentToMainFragment()
+            navController.navigate(action)
         }
     }
 }

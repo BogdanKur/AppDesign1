@@ -1,4 +1,4 @@
-package com.example.appdesign.fragment
+package com.example.appdesign.fragment.settings
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -26,14 +26,20 @@ class ChangePasswordFragment : Fragment() {
 
         val navController = findNavController()
         binding.materialButtonBackToSettings.setOnClickListener {
-            navController.navigate(R.id.action_changePasswordFragment_to_settingsFragment)
+            val action = ChangePasswordFragmentDirections.actionChangePasswordFragmentToSettingsFragment()
+            navController.navigate(action)
         }
+
         binding.btnSave.setOnClickListener {
-            navController.navigate(R.id.action_changePasswordFragment_to_settingsFragment)
+            val action = ChangePasswordFragmentDirections.actionChangePasswordFragmentToSettingsFragment()
+            navController.navigate(action)
         }
+
         binding.materialButtonCancelChangePassword.setOnClickListener {
-            navController.navigate(R.id.action_changePasswordFragment_to_settingsFragment)
+            val action = ChangePasswordFragmentDirections.actionChangePasswordFragmentToSettingsFragment()
+            navController.navigate(action)
         }
+
     }
 
 }

@@ -1,4 +1,4 @@
-package com.example.appdesign.fragment
+package com.example.appdesign.fragment.settings
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -25,12 +25,14 @@ class TurnOffNotificationFragment : Fragment() {
         _binding = FragmentTurnOffNotificationBinding.bind(view)
         val navController = findNavController()
         binding.materialButtonCancel.setOnClickListener {
-            navController.navigate(R.id.action_turnOffNotificationFragment_to_settingsFragment)
+            val action = TurnOffNotificationFragmentDirections.actionTurnOffNotificationFragmentToSettingsFragment()
+            navController.navigate(action)
         }
 
         binding.materialButtonTurnOff.setOnClickListener {
             val bundle = Bundle().apply { putBoolean("switchOff", false) }
-            navController.navigate(R.id.action_turnOffNotificationFragment_to_settingsFragment, bundle)
+            val action = TurnOffNotificationFragmentDirections.actionTurnOffNotificationFragmentToSettingsFragment()
+            navController.navigate(action)
         }
     }
 }

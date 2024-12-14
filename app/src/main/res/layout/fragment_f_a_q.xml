@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_app"
-    tools:context=".fragment.FAQFragment">
+    tools:context=".fragment.faq.FAQFragment">
     <FrameLayout
         android:id="@+id/frameLayout11"
         android:layout_width="@dimen/_32dp"

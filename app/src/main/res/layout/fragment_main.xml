@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_app"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment.MainFragment">
+    tools:context=".fragment.main.MainFragment">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -438,16 +438,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/up_main" />
+                    <com.example.appdesign.LineChartViewUp
+                        android:layout_width="@dimen/_140dp"
+                        android:id="@+id/lineChartView"
+                        android:layout_height="@dimen/_95dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/up_main"/>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center|bottom"
-                        android:layout_marginBottom="@dimen/_13dp">
+                        android:layout_marginBottom="@dimen/_6dp">
 
                         <TextView
                             android:id="@+id/tvUpSum"
@@ -471,16 +473,18 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_8dp">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/down_main" />
+                    <com.example.appdesign.LineChartViewDown
+                        android:layout_width="@dimen/_140dp"
+                        android:id="@+id/lineChartViewDown"
+                        android:layout_height="@dimen/_95dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/down_main"/>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center|bottom"
-                        android:layout_marginBottom="@dimen/_13dp">
+                        android:layout_marginBottom="@dimen/_6dp">
 
                         <TextView
                             android:id="@+id/tvDownSum"
