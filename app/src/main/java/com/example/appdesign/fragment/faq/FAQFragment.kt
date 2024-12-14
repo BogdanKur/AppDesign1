@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.appdesign.R
 import com.example.appdesign.databinding.FragmentFAQBinding
 import com.example.appdesign.fragment.earning.EarningFragmentDirections
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class FAQFragment : Fragment() {
     private var _binding: FragmentFAQBinding? = null
@@ -34,8 +35,10 @@ class FAQFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentFAQBinding.bind(view)
         val navController = findNavController()
+        val bottomNav: BottomNavigationView = requireActivity().findViewById(R.id.bottomNavigationViews)
+        bottomNav.visibility = View.VISIBLE
         binding.btnProfilePhoto.setOnClickListener {
-            val action = FAQFragmentDirections.actionFaqFragmentToProfileFragment()
+            val action = FAQFragmentDirections.actionFaqFragmentToProfileFragment("faq")
             navController.navigate(action)
         }
         binding.openQuestionOne.setOnClickListener {

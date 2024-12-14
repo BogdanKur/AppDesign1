@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.appdesign.R
 import com.example.appdesign.databinding.FragmentSettingsBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class SettingsFragment : Fragment() {
     private var _binding: FragmentSettingsBinding? = null
@@ -23,6 +24,8 @@ class SettingsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentSettingsBinding.bind(view)
         val navController = findNavController()
+        val bottomNav: BottomNavigationView = requireActivity().findViewById(R.id.bottomNavigationViews)
+        bottomNav.visibility = View.VISIBLE
         arguments?.let { bundle->
             binding.switchPush.isChecked = bundle.getBoolean("switchPush") ?: true
         }
@@ -48,7 +51,7 @@ class SettingsFragment : Fragment() {
             navController.navigate(action)
         }
         binding.btnProfilePhoto.setOnClickListener {
-            val action = SettingsFragmentDirections.actionSettingsFragmentToProfileFragment()
+            val action = SettingsFragmentDirections.actionSettingsFragmentToProfileFragment("setting")
             navController.navigate(action)
         }
     }

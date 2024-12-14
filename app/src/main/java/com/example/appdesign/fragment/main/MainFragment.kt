@@ -41,7 +41,7 @@ class MainFragment : Fragment() {
             navController.navigate(action)
         }
         binding.btnProfilePhoto.setOnClickListener {
-            val action = MainFragmentDirections.actionMainFragmentToProfileFragment()
+            val action = MainFragmentDirections.actionMainFragmentToProfileFragment("main")
             navController.navigate(action)
         }
         val dataPoints = listOf(2f, 5f, 8f, 6f, 4f, 5f, 2f)

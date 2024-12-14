@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.appdesign.R
 import com.example.appdesign.databinding.FragmentEarningBinding
 import com.example.appdesign.fragment.main.MainFragmentDirections
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class EarningFragment : Fragment() {
     private var _binding: FragmentEarningBinding? = null
@@ -25,8 +26,10 @@ class EarningFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentEarningBinding.bind(view)
         val navController = findNavController()
+        val bottomNav: BottomNavigationView = requireActivity().findViewById(R.id.bottomNavigationViews)
+        bottomNav.visibility = View.VISIBLE
         binding.btnProfilePhoto.setOnClickListener {
-            val action = EarningFragmentDirections.actionEarningFragmentToProfileFragment()
+            val action = EarningFragmentDirections.actionEarningFragmentToProfileFragment("earn")
             navController.navigate(action)
         }
     }

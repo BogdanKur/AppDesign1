@@ -154,7 +154,7 @@
             <RelativeLayout
                 android:id="@+id/rl"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_35dp">
+                android:layout_height="@dimen/_45dp">
 
                 <ImageButton
                     android:id="@+id/btnRegistrate"
@@ -181,7 +181,7 @@
                 android:background="@drawable/frame_2087327508"
                 android:layout_marginBottom="@dimen/_22dp"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_40dp"
+                android:layout_height="@dimen/_50dp"
                 android:layout_marginTop="@dimen/_15dp"
                 android:textAllCaps="false"
                 android:textColor="@color/white"

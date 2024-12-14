@@ -11,6 +11,7 @@ import com.example.appdesign.R
 import com.example.appdesign.adapter.Message
 import com.example.appdesign.databinding.FragmentSupportBinding
 import com.example.appdesign.fragment.earning.EarningFragmentDirections
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class SupportFragment : Fragment() {
     private var _binding: FragmentSupportBinding? = null
@@ -27,6 +28,8 @@ class SupportFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentSupportBinding.bind(view)
         val navController = findNavController()
+        val bottomNav: BottomNavigationView = requireActivity().findViewById(R.id.bottomNavigationViews)
+        bottomNav.visibility = View.VISIBLE
         adapter = MessageAdapter()
         binding.rvMessage.adapter = adapter
         val messages = listOf(
@@ -38,7 +41,7 @@ class SupportFragment : Fragment() {
         adapter.submitList(messages)
 
         binding.btnProfilePhoto.setOnClickListener {
-            val action = SupportFragmentDirections.actionSupportFragmentToProfileFragment()
+            val action = SupportFragmentDirections.actionSupportFragmentToProfileFragment("support")
             navController.navigate(action)
         }
     }
