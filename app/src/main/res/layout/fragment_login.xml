@@ -59,7 +59,7 @@
                 <ImageButton
                     android:id="@+id/btnGoogle"
                     android:layout_width="@dimen/_56dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_56dp"
                     android:background="@drawable/google_icon"
                     android:clipToOutline="true"
                     android:scaleType="centerCrop" />
@@ -67,14 +67,14 @@
                 <ImageButton
                     android:id="@+id/btnApple"
                     android:layout_width="@dimen/_56dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_56dp"
                     android:layout_marginHorizontal="@dimen/_16dp"
                     android:background="@drawable/apple_icon" />
 
                 <ImageButton
                     android:id="@+id/btnFacebook"
                     android:layout_width="@dimen/_56dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_56dp"
                     android:background="@drawable/facebook_icon" />
             </LinearLayout>
 

@@ -8,8 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
+import androidx.navigation.fragment.findNavController
 import com.example.appdesign.R
 import com.example.appdesign.databinding.FragmentFAQBinding
+import com.example.appdesign.fragment.earning.EarningFragmentDirections
 
 class FAQFragment : Fragment() {
     private var _binding: FragmentFAQBinding? = null
@@ -31,7 +33,11 @@ class FAQFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentFAQBinding.bind(view)
-
+        val navController = findNavController()
+        binding.btnProfilePhoto.setOnClickListener {
+            val action = FAQFragmentDirections.actionFaqFragmentToProfileFragment()
+            navController.navigate(action)
+        }
         binding.openQuestionOne.setOnClickListener {
             isOpen1 = openQuestionAnswer(binding.openQuestionOne, binding.questionAnswer1, isOpen1)
         }

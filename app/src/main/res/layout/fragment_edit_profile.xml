@@ -10,7 +10,8 @@
     android:orientation="vertical"
     android:background="@drawable/background_app"
     tools:ignore="MissingConstraints"
-    android:padding="@dimen/padding_horizontal">
+    android:paddingTop="@dimen/_9dp"
+    android:paddingHorizontal="@dimen/_16dp">
 
     <FrameLayout
         android:id="@+id/flTop"

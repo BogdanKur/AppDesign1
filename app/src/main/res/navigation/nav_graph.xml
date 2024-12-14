@@ -159,19 +159,37 @@
         android:id="@+id/earningFragment"
         android:name="com.example.appdesign.fragment.earning.EarningFragment"
         tools:layout="@layout/fragment_earning">
-
+        <action
+            android:id="@+id/action_earningFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>
     </fragment>
     <fragment
         android:id="@+id/supportFragment"
         android:name="com.example.appdesign.fragment.support.SupportFragment"
         tools:layout="@layout/fragment_support">
-
+        <action
+            android:id="@+id/action_supportFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>
     </fragment>
     <fragment
         android:id="@+id/faqFragment"
         android:name="com.example.appdesign.fragment.faq.FAQFragment"
         tools:layout="@layout/fragment_f_a_q">
-
+        <action
+            android:id="@+id/action_faqFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
