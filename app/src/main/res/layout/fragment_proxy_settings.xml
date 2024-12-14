@@ -146,6 +146,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/llProxySet"
         android:layout_marginTop="@dimen/_15dp"
         app:layout_constraintTop_toBottomOf="@id/llEarningEnabled"
         android:orientation="vertical"
@@ -308,5 +309,13 @@
             </LinearLayout>
         </FrameLayout>
     </LinearLayout>
+    <TextView
+        android:textColor="#FA4347"
+        android:textSize="@dimen/_12sp"
+        android:layout_marginTop="@dimen/_7dp"
+        app:layout_constraintTop_toBottomOf="@id/llProxySet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Only traffic from your real ip address is counted. VPNs and emulators are prohibited. The earned funds will not be credited, and these actions will result in the account being blocked"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

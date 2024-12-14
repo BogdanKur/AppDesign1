@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_gravity="end"
+    android:layout_gravity="start"
     android:background="@android:color/transparent"
     android:orientation="horizontal">
     <ImageView
@@ -22,7 +22,6 @@
             android:layout_margin="@dimen/_8dp"
             android:background="@android:color/transparent"
             android:textSize="@dimen/_16sp"
-            android:text="Hi, I am manager Max. How can I help you? Choose or write your inquiry. "
             android:id="@+id/tvMessage"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -42,6 +41,4 @@
             android:layout_height="wrap_content"
             android:text="18:32"/>
     </LinearLayout>
-
-
 </LinearLayout>

@@ -116,4 +116,5 @@
     <string name="tvSuccessfulConnections">Successful connections</string>
     <string name="tvNumberOfConnections">Number of connections</string>
     <string name="tvReferalCode">Referal code</string>
+    <string name="only_mobile_traffic_is_counted_vpns_and_emulators_are_prohibited_earnings_will_not_be_credited_and_these_actions_will_lead_to_account_suspension">Only mobile traffic is counted; VPNs and emulators are prohibited. Earnings will not be credited, and these actions will lead to account suspension</string>
 </resources>

@@ -126,7 +126,8 @@
         android:text="@string/tvSpecifyYourGender"
         android:textColor="#B2FFFFFF"/>
     <RadioGroup
-        android:layout_marginTop="@dimen/_4dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginBottom="@dimen/_16dp"
         android:theme="@style/AppSearchViewStyle"
         android:id="@+id/male_group"
         android:layout_width="wrap_content"
