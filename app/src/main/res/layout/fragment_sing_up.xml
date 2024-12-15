@@ -85,6 +85,7 @@
             app:layout_constraintTop_toBottomOf="@id/llGoogleAppleFacebook">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:textSize="@dimen/_16sp"
                 android:id="@+id/etUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -92,11 +93,12 @@
                 android:background="@drawable/edit_text_background"
                 android:hint="@string/etUsername"
                 android:paddingHorizontal="@dimen/_22dp"
-                android:paddingVertical="@dimen/_8dp"
+                android:paddingVertical="@dimen/_10dp"
                 android:textColor="#B2FFFFFF"
                 android:textColorHint="#B2FFFFFF" />
 
             <com.google.android.material.textfield.TextInputEditText
+                android:textSize="@dimen/_16sp"
                 android:id="@+id/etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -104,7 +106,7 @@
                 android:background="@drawable/edit_text_background"
                 android:hint="@string/etEmail"
                 android:paddingHorizontal="@dimen/_22dp"
-                android:paddingVertical="@dimen/_8dp"
+                android:paddingVertical="@dimen/_10dp"
                 android:textColor="#B2FFFFFF"
                 android:textColorHint="#B2FFFFFF" />
 
@@ -113,17 +115,20 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:textSize="@dimen/_16sp"
+                    android:inputType="textPassword"
                     android:id="@+id/etPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_background"
                     android:hint="@string/etPassword"
                     android:paddingHorizontal="@dimen/_22dp"
-                    android:paddingVertical="@dimen/_8dp"
+                    android:paddingVertical="@dimen/_10dp"
                     android:textColor="#B2FFFFFF"
                     android:textColorHint="#B2FFFFFF" />
 
                 <ImageButton
+                    android:id="@+id/btnPassVisible"
                     android:layout_width="@dimen/_24dp"
                     android:layout_height="@dimen/_24dp"
                     android:layout_gravity="center|end"
@@ -132,6 +137,7 @@
             </FrameLayout>
 
             <com.google.android.material.textfield.TextInputEditText
+                android:textSize="@dimen/_16sp"
                 android:id="@+id/etRefCode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -139,7 +145,7 @@
                 android:background="@drawable/edit_text_background"
                 android:hint="@string/tvReferalCode"
                 android:paddingHorizontal="@dimen/_22dp"
-                android:paddingVertical="@dimen/_8dp"
+                android:paddingVertical="@dimen/_10dp"
                 android:textColor="#B2FFFFFF"
                 android:textColorHint="#B2FFFFFF" />
         </LinearLayout>

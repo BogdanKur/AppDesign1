@@ -20,7 +20,7 @@
             android:layout_gravity="start"
             android:layout_marginHorizontal="@dimen/_15dp"
             android:layout_marginBottom="@dimen/_9dp"
-            android:layout_marginTop="@dimen/_9dp"
+            android:layout_marginTop="@dimen/_24dp"
             tools:ignore="MissingConstraints">
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnMenuOpen"
@@ -36,7 +36,7 @@
         <FrameLayout
             android:layout_marginHorizontal="@dimen/_15dp"
             android:layout_marginBottom="@dimen/_9dp"
-            android:layout_marginTop="@dimen/_9dp"
+            android:layout_marginTop="@dimen/_24dp"
             android:layout_width="@dimen/_32dp"
             android:layout_height="@dimen/_32dp"
             android:layout_gravity="end"

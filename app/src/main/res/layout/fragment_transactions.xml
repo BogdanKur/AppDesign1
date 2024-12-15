@@ -6,10 +6,11 @@
     android:id="@+id/llTransactions"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_app"
-    android:padding="@dimen/_15dp">
+    android:background="@drawable/background_app">
     <FrameLayout
         android:id="@+id/frameLayout12"
+        android:layout_marginTop="@dimen/_24dp"
+        android:layout_marginHorizontal="@dimen/_16dp"
         android:layout_width="@dimen/_32dp"
         android:layout_height="@dimen/_32dp"
         android:layout_gravity="start"
@@ -30,6 +31,7 @@
     </FrameLayout>
 
     <FrameLayout
+        android:layout_margin="@dimen/_24dp"
         android:layout_width="@dimen/_32dp"
         android:layout_height="@dimen/_32dp"
         android:layout_gravity="end"
@@ -52,6 +54,7 @@
             android:src="@drawable/profile_photo" />
     </FrameLayout>
     <LinearLayout
+        android:layout_marginHorizontal="@dimen/_16dp"
         android:id="@+id/llTransactions1"
         android:layout_marginTop="@dimen/_15dp"
         app:layout_constraintTop_toBottomOf="@id/frameLayout12"
@@ -72,7 +75,7 @@
             android:textSize="@dimen/_20sp"/>
     </LinearLayout>
     <LinearLayout
-        android:visibility="gone"
+        android:layout_marginHorizontal="@dimen/_16dp"
         android:id="@+id/llTransAllView"
         android:layout_marginTop="@dimen/_15dp"
         app:layout_constraintTop_toBottomOf="@id/llTransactions1"
@@ -82,7 +85,7 @@
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_30dp"
             android:orientation="horizontal">
             <FrameLayout
                 android:id="@+id/rl1"

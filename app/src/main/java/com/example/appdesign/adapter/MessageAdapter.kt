@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appdesign.R
 import com.example.appdesign.databinding.BotMessageBinding
+import com.example.appdesign.databinding.DateSupportBinding
 import com.example.appdesign.databinding.YourMessageBinding
 
 class MessageAdapter : ListAdapter<Message, RecyclerView.ViewHolder>(MessageDiffCallback()) {
@@ -16,12 +17,14 @@ class MessageAdapter : ListAdapter<Message, RecyclerView.ViewHolder>(MessageDiff
     companion object {
         const val TYPE_BOT = 0
         const val TYPE_USER = 1
+        const val TYPE_DATE = 2
     }
 
     override fun getItemViewType(position: Int): Int {
         return when (getItem(position)) {
             is Message.BotMessage -> TYPE_BOT
             is Message.YourMessage -> TYPE_USER
+            is Message.DateMessage -> TYPE_DATE
         }
     }
 
@@ -36,6 +39,10 @@ class MessageAdapter : ListAdapter<Message, RecyclerView.ViewHolder>(MessageDiff
                 val binding = YourMessageBinding.inflate(inflater, parent, false)
                 YourMessageViewHolder(binding)
             }
+            TYPE_DATE -> {
+                val binding = DateSupportBinding.inflate(inflater, parent, false)
+                DateSupportViewHolder(binding)
+            }
             else -> throw IllegalArgumentException("Invalid view type")
         }
     }
@@ -44,20 +51,24 @@ class MessageAdapter : ListAdapter<Message, RecyclerView.ViewHolder>(MessageDiff
         when (holder) {
             is BotMessageViewHolder -> holder.bind((getItem(position) as Message.BotMessage).message)
             is YourMessageViewHolder -> holder.bind((getItem(position) as Message.YourMessage).message)
+            is DateSupportViewHolder -> holder.bind((getItem(position) as Message.DateMessage).date)
         }
     }
 
-    // ViewHolder for BotMessage
     inner class BotMessageViewHolder(private val binding: BotMessageBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(message: String) {
             binding.tvMessage.text = message
         }
     }
 
-    // ViewHolder for YourMessage
     inner class YourMessageViewHolder(private val binding: YourMessageBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(message: String) {
             binding.tvMessage.text = message
+        }
+    }
+    inner class DateSupportViewHolder(private val binding: DateSupportBinding) : RecyclerView.ViewHolder(binding.root) {
+        fun bind(message: String) {
+            binding.tvDate.text = message
         }
     }
 }
@@ -76,5 +87,6 @@ class MessageDiffCallback : DiffUtil.ItemCallback<Message>() {
 sealed class Message {
     data class BotMessage(val message: String) : Message()
     data class YourMessage(val message: String) : Message()
+    data class DateMessage(val date: String) : Message()
 }
 

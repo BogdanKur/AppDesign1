@@ -117,4 +117,7 @@
     <string name="tvNumberOfConnections">Number of connections</string>
     <string name="tvReferalCode">Referal code</string>
     <string name="only_mobile_traffic_is_counted_vpns_and_emulators_are_prohibited_earnings_will_not_be_credited_and_these_actions_will_lead_to_account_suspension">Only mobile traffic is counted; VPNs and emulators are prohibited. Earnings will not be credited, and these actions will lead to account suspension</string>
+    <string name="only_traffic_from_your_real_ip_address_is_counted_vpns_and_emulators_are_prohibited_the_earned_funds_will_not_be_credited_and_these_actions_will_result_in_the_account_being_blocked">Only traffic from your real ip address is counted. VPNs and emulators are prohibited. The earned funds will not be credited, and these actions will result in the account being blocked</string>
+    <string name="withdraw_the_amount">Withdraw the amount</string>
+    <string name="disable_optimization">Disable optimization</string>
 </resources>

@@ -33,6 +33,7 @@ class SupportFragment : Fragment() {
         adapter = MessageAdapter()
         binding.rvMessage.adapter = adapter
         val messages = listOf(
+            Message.DateMessage("17.11.2024"),
             Message.BotMessage("Hello, how can I help you?"),
             Message.YourMessage("I need some help with my account."),
             Message.BotMessage("Sure, I'd be happy to help!")

@@ -90,7 +90,7 @@
         <LinearLayout
             android:id="@+id/ll"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_30dp"
+            android:layout_height="@dimen/_40dp"
             android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@id/materialButton">
 
@@ -219,8 +219,8 @@
             android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/_170dp"
+                android:layout_height="@dimen/_100dp"
                 android:src="@drawable/card"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="MissingConstraints" />
@@ -235,16 +235,17 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="MissingConstraints" />
             <TextView
+                android:layout_marginStart="@dimen/_16dp"
                 android:id="@+id/tvGiftCardSteam"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_16sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tvGiftCardSteam"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView2"
                 app:layout_constraintTop_toTopOf="parent" />
             <TextView
+                android:layout_marginStart="@dimen/_16dp"
                 android:id="@+id/tvGiftCardNumber"
                 android:layout_marginTop="@dimen/_10dp"
                 android:textColor="#B2FFFFFF"
@@ -252,17 +253,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="9999** **** 9999"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView2"
                 app:layout_constraintTop_toBottomOf="@id/tvGiftCardSteam" />
             <TextView
+                android:layout_marginStart="@dimen/_16dp"
                 android:layout_marginTop="@dimen/_10dp"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_16sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="547.78 Tokens"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView2"
                 app:layout_constraintTop_toBottomOf="@id/tvGiftCardNumber" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -274,8 +274,8 @@
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/_170dp"
+                android:layout_height="@dimen/_100dp"
                 android:src="@drawable/crypto_wallet"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="MissingConstraints" />
@@ -290,18 +290,18 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="MissingConstraints" />
             <TextView
-                android:gravity="center"
+                android:layout_marginStart="@dimen/_16dp"
                 android:id="@+id/tvCryptoWallet"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_16sp"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/tvInCryptoToTheWallet"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView3"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:layout_marginStart="@dimen/_16dp"
                 android:gravity="center"
                 android:id="@+id/tvCryptoWalletNumber"
                 android:layout_width="wrap_content"
@@ -310,12 +310,12 @@
                 android:text="+7 999 99 9999"
                 android:textColor="#B2FFFFFF"
                 android:textSize="@dimen/_16sp"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.567"
                 app:layout_constraintStart_toEndOf="@+id/imageView3"
                 app:layout_constraintTop_toBottomOf="@id/tvCryptoWallet" />
 
             <TextView
+                android:layout_marginStart="@dimen/_16dp"
                 android:gravity="center"
                 android:layout_marginTop="@dimen/_10dp"
                 android:textColor="@color/white"
@@ -323,9 +323,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="547.78 Tokens"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView3"
                 app:layout_constraintTop_toBottomOf="@id/tvCryptoWalletNumber" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
+    <FrameLayout
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButtonDisableOptimization"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/withdraw_the_amount"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_16sp"
+            android:textColor="@color/white"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_background_settings_change"/>
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

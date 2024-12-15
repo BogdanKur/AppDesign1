@@ -7,36 +7,45 @@
     android:gravity="end"
     android:layout_marginBottom="@dimen/_7dp"
     android:orientation="horizontal">
+
     <LinearLayout
-        android:padding="@dimen/_8dp"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/_8dp"
+        android:paddingHorizontal="@dimen/_12dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/your_message_background">
+
         <TextView
             android:background="@android:color/transparent"
             android:textSize="@dimen/_16sp"
             android:text="My name is Dmitriy."
             android:id="@+id/tvMessage"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:gravity="start|center"
-            android:layout_gravity="start|center"
             android:textColor="@color/white"/>
-        <TextView
-            android:layout_marginStart="@dimen/_4dp"
-            android:background="@android:color/transparent"
-            android:layout_gravity="end|bottom"
-            android:textColor="#B2FFFFFF"
-            android:textSize="@dimen/_12sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="18:32"/>
-        <ImageView
-            android:layout_gravity="end|bottom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/checks"/>
-    </LinearLayout>
 
+        <LinearLayout
+            android:layout_gravity="end"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4dp">
+
+            <TextView
+                android:layout_marginEnd="@dimen/_4dp"
+                android:background="@android:color/transparent"
+                android:textColor="#B2FFFFFF"
+                android:textSize="@dimen/_12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18:32"/>
+
+            <ImageView
+                android:layout_width="@dimen/_18dp"
+                android:layout_height="@dimen/_18dp"
+                android:src="@drawable/checks"/>
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

@@ -1,312 +1,344 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_app"
-    android:padding="@dimen/_15dp"
+    android:paddingHorizontal="@dimen/_15dp"
+    android:paddingTop="@dimen/_24dp"
     tools:ignore="MissingConstraints">
 
-    <FrameLayout
-        android:id="@+id/frameLayout14"
-        android:layout_width="@dimen/_32dp"
-        android:layout_height="@dimen/_32dp"
-        android:layout_gravity="start"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnMenuOpen3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@android:color/transparent" />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/hamburger_menu" />
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="@dimen/_32dp"
-        android:layout_height="@dimen/_32dp"
-        android:layout_gravity="end"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnProfilePhoto3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@android:color/transparent" />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/rounded_image"
-            android:clipToOutline="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/profile_photo" />
-    </FrameLayout>
-
-    <LinearLayout
-
-        android:id="@+id/llProxySettings"
-        app:layout_constraintTop_toBottomOf="@id/frameLayout14"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/materialButtonBackToProfileSettings"
-            android:layout_width="@dimen/_24dp"
-            android:layout_height="@dimen/_24dp"
-            android:background="@drawable/arrowleft"/>
-        <TextView
-            android:layout_marginStart="@dimen/_100dp"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="@string/tvProxySettings"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_20sp"/>
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/llEarningEnabled"
-        android:orientation="vertical"
-        android:layout_marginTop="@dimen/_5dp"
-        app:layout_constraintTop_toBottomOf="@id/llProxySettings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/promotion_background"
-        android:padding="@dimen/_10dp">
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/TvEarningsEnabled"
-                android:textColor="@color/white"
-                app:layout_constraintStart_toStartOf="parent" />
-            <Switch
-                android:checked="true"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:id="@+id/switchVolume"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:thumb="@drawable/thumb_selector"
-                android:track="@drawable/switch_background"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-        <TextView
-            android:layout_marginTop="@dimen/_5dp"
-            android:textColor="#B2FFFFFF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/switch_the_toggle_to_the_on_position_to_ensure_your_earnings_continue_even_if_the_app_is_closed_or_running_in_the_background"/>
-        <TextView
-            android:layout_marginTop="@dimen/_5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tvAttention"
-            android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="parent" />
-        <TextView
-            android:layout_marginTop="@dimen/_5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/attention_we_also_recommend_disabling_battery_optimization_active_optimization_may_disrupt_the_connection_on_many_devices_leading_to_significantly_reduced_earnings"
-            android:textColor="#B2FFFFFF"
-            app:layout_constraintStart_toStartOf="parent" />
         <FrameLayout
-            android:layout_marginTop="@dimen/_10dp"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_50dp">
+            android:id="@+id/frameLayout14"
+            android:layout_width="@dimen/_32dp"
+            android:layout_height="@dimen/_32dp"
+            android:layout_gravity="start"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/materialButtonDisableOptimization"
+                android:id="@+id/btnMenuOpen3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:text="Disable optimization"
-                android:textAllCaps="false"
-                android:textSize="@dimen/_16sp"
-                android:textColor="@color/white"/>
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/button_background_settings_change"/>
+                android:src="@drawable/hamburger_menu" />
         </FrameLayout>
-    </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/llProxySet"
-        app:layout_constraintTop_toBottomOf="@id/llEarningEnabled"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="@dimen/_32dp"
+            android:layout_height="@dimen/_32dp"
+            android:layout_gravity="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnProfilePhoto3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+
             <ImageView
-                android:src="@drawable/gearsix"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:textColor="@color/white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tvProxySettings"/>
-        </LinearLayout>
-        <TextView
-            android:layout_marginTop="@dimen/_5dp"
-            android:textSize="@dimen/_14sp"
-            android:textColor="@color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tvPriceUnitOfMeasurement"/>
-        <RadioGroup
-            android:layout_marginTop="@dimen/_4dp"
-            android:theme="@style/AppSearchViewStyle"
-            android:id="@+id/male_group"
-            android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_image"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_photo" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_16dp"
+            android:id="@+id/llProxySettings"
+            app:layout_constraintTop_toBottomOf="@id/frameLayout14"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/radio_1gb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1 GB"
-                android:textColor="@color/white"
-                android:button="@drawable/custom_radio_button"
-                android:layout_marginEnd="@dimen/_15dp"/>
-
-            <RadioButton
-                android:layout_marginEnd="@dimen/_15dp"
-                android:id="@+id/radio_3gb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3 GB"
-                android:textColor="#80FFFFFF"
-                android:button="@drawable/custom_radio_button"/>
-
-            <RadioButton
-                android:id="@+id/radio_5gb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="5 GB"
-                android:textColor="@color/white"
-                android:button="@drawable/custom_radio_button"
-                android:layout_marginEnd="@dimen/_15dp"
-                android:checked="true"/>
-
-            <RadioButton
-                android:id="@+id/radio_no"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="no restrictions"
-                android:textColor="#80FFFFFF"
-                android:button="@drawable/custom_radio_button"/>
-        </RadioGroup>
-        <TextView
-            android:layout_marginTop="@dimen/_5dp"
-            android:textSize="@dimen/_14sp"
-            android:textColor="@color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Price per 1 GB:"/>
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/materialButtonBackToProfileSettings"
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:background="@drawable/arrowleft"/>
             <TextView
+                android:layout_marginStart="@dimen/_100dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/tvProxySettings"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llEarningEnabled"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_24dp"
+            app:layout_constraintTop_toBottomOf="@id/llProxySettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/promotion_background"
+            android:padding="@dimen/_10dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/TvEarningsEnabled"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent" />
+                <TextView
+                    android:layout_marginEnd="@dimen/_4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="On"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toStartOf="@id/switchVolume"/>
+                <Switch
+                    android:checked="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/switchVolume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:thumb="@drawable/thumb_selector"
+                    android:track="@drawable/switch_background"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_marginTop="@dimen/_5dp"
+                android:textColor="#B2FFFFFF"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tv3072"
-                android:textColor="#B2FFFFFF"
+                android:text="@string/switch_the_toggle_to_the_on_position_to_ensure_your_earnings_continue_even_if_the_app_is_closed_or_running_in_the_background"/>
+            <TextView
+                android:layout_marginTop="@dimen/_5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvAttention"
+                android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent" />
             <TextView
-                android:textColor="#B2FFFFFF"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:id="@+id/tv1536"
+                android:layout_marginTop="@dimen/_5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tv1536"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:text="@string/attention_we_also_recommend_disabling_battery_optimization_active_optimization_may_disrupt_the_connection_on_many_devices_leading_to_significantly_reduced_earnings"
+                android:textColor="#B2FFFFFF"
+                app:layout_constraintStart_toStartOf="parent" />
+            <FrameLayout
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50dp">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/materialButtonDisableOptimization"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="@string/disable_optimization"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_16sp"
+                    android:textColor="@color/white"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_background_settings_change"/>
+            </FrameLayout>
+        </LinearLayout>
+
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/_24dp"
+            android:id="@+id/llProxySet"
+            app:layout_constraintTop_toBottomOf="@id/llEarningEnabled"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <ImageView
-                android:src="@drawable/chartlineup"
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/gearsix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvProxySettings"/>
+            </LinearLayout>
             <TextView
+                android:layout_marginTop="@dimen/_16dp"
+                android:textSize="@dimen/_14sp"
                 android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tvProxyStatistics"/>
+                android:text="@string/tvPriceUnitOfMeasurement"/>
+            <RadioGroup
+                android:layout_marginTop="@dimen/_12dp"
+                android:theme="@style/AppSearchViewStyle"
+                android:id="@+id/male_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:paddingLeft="@dimen/_4dp"
+                    android:id="@+id/radio_1gb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 GB"
+                    android:textColor="@color/white"
+                    android:button="@drawable/custom_radio_button"
+                    android:layout_marginEnd="@dimen/_10dp"/>
+
+                <RadioButton
+                    android:paddingLeft="@dimen/_4dp"
+                    android:layout_marginEnd="@dimen/_10dp"
+                    android:id="@+id/radio_3gb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3 GB"
+                    android:textColor="#80FFFFFF"
+                    android:button="@drawable/custom_radio_button"/>
+
+                <RadioButton
+                    android:paddingLeft="@dimen/_4dp"
+                    android:id="@+id/radio_5gb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5 GB"
+                    android:textColor="@color/white"
+                    android:button="@drawable/custom_radio_button"
+                    android:layout_marginEnd="@dimen/_10dp"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:paddingLeft="@dimen/_4dp"
+                    android:id="@+id/radio_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="no restrictions"
+                    android:textColor="#80FFFFFF"
+                    android:button="@drawable/custom_radio_button"/>
+            </RadioGroup>
+            <TextView
+                android:layout_marginTop="@dimen/_16dp"
+                android:textSize="@dimen/_14sp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price per 1 GB:"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginTop="@dimen/_12dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="@dimen/_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv3072"
+                    android:textColor="#B2FFFFFF"
+                    app:layout_constraintStart_toStartOf="parent" />
+                <TextView
+                    android:textSize="@dimen/_14sp"
+                    android:textColor="#B2FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/tv1536"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv1536"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_24dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/chartlineup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvProxyStatistics"/>
+            </LinearLayout>
+            <FrameLayout
+                android:layout_marginTop="@dimen/_16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/referrals_background"
+                android:padding="@dimen/_16dp">
+                <LinearLayout
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:layout_gravity="start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:textSize="@dimen/_24sp"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="121"/>
+                    <TextView
+                        android:textSize="@dimen/_14sp"
+                        android:textColor="#80FFFFFF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tvNumberOfConnections"/>
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="@dimen/_3dp"
+                    android:layout_height="@dimen/_50dp"
+                    android:src="@drawable/line"
+                    android:layout_gravity="center"/>
+                <LinearLayout
+                    android:layout_marginEnd="@dimen/_10dp"
+                    android:layout_gravity="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:textSize="@dimen/_24sp"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="25"/>
+                    <TextView
+                        android:textSize="@dimen/_14sp"
+                        android:textColor="#80FFFFFF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tvSuccessfulConnections"/>
+                </LinearLayout>
+            </FrameLayout>
+            <TextView
+                android:layout_marginBottom="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_12dp"
+                android:textColor="#FA4347"
+                android:textSize="@dimen/_12sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/only_traffic_from_your_real_ip_address_is_counted_vpns_and_emulators_are_prohibited_the_earned_funds_will_not_be_credited_and_these_actions_will_result_in_the_account_being_blocked"/>
         </LinearLayout>
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/referrals_background"
-            android:padding="@dimen/_7dp">
-            <LinearLayout
-                android:layout_marginStart="@dimen/_10dp"
-                android:layout_gravity="start"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:textSize="@dimen/_20sp"
-                    android:textColor="@color/white"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="121"/>
-                <TextView
-                    android:textSize="@dimen/_12sp"
-                    android:textColor="#80FFFFFF"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tvNumberOfConnections"/>
-            </LinearLayout>
-            <ImageView
-                android:layout_width="@dimen/_3dp"
-                android:layout_height="@dimen/_50dp"
-                android:src="@drawable/line"
-                android:layout_gravity="center"/>
-            <LinearLayout
-                android:layout_marginEnd="@dimen/_10dp"
-                android:layout_gravity="end"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:textSize="@dimen/_20sp"
-                    android:textColor="@color/white"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="25"/>
-                <TextView
-                    android:textSize="@dimen/_12sp"
-                    android:textColor="#80FFFFFF"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tvSuccessfulConnections"/>
-            </LinearLayout>
-        </FrameLayout>
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

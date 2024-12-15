@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:ignore="MissingConstraints">
-        <com.google.android.material.button.MaterialButton
+        <ImageView
             android:layout_gravity="end"
             android:layout_width="@dimen/_24dp"
             android:layout_height="@dimen/_24dp"

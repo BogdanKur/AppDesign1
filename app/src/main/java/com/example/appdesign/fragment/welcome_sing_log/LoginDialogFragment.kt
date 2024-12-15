@@ -1,13 +1,16 @@
 package com.example.appdesign.fragment.welcome_sing_log
 
 import android.os.Bundle
+import android.text.InputType
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import androidx.navigation.fragment.findNavController
 import com.example.appdesign.R
 import com.example.appdesign.databinding.FragmentLoginDialogBinding
+import com.google.android.material.textfield.TextInputEditText
 
 class LoginDialogFragment : Fragment() {
     private var _binding: FragmentLoginDialogBinding? = null
@@ -28,7 +31,22 @@ class LoginDialogFragment : Fragment() {
             val action = LoginDialogFragmentDirections.actionLoginDialogFragmentToLoginFragment()
             navController.navigate(action)
         }
+        binding.btnEyeEnter.setOnClickListener {
+            togglePasswordVisibility(binding.btnEyeEnter, binding.etNewPassword)
+        }
+        binding.btnEyeRepeat.setOnClickListener {
+            togglePasswordVisibility(binding.btnEyeRepeat, binding.etRepeatPassword)
+        }
     }
 
+    private fun togglePasswordVisibility(button: ImageButton, etNewPassword: TextInputEditText) {
+        if (etNewPassword.inputType == InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD) {
+            etNewPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+            button.setBackgroundResource(R.drawable.eye_closed)
+        } else {
+            etNewPassword.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+            button.setBackgroundResource(R.drawable.open_eyes)
+        }
+    }
 
 }
