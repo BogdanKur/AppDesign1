@@ -135,6 +135,7 @@
         android:orientation="horizontal">
 
         <RadioButton
+            android:paddingStart="@dimen/_7dp"
             android:id="@+id/radio_male"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -145,6 +146,7 @@
             android:checked="true"/>
 
         <RadioButton
+            android:paddingStart="@dimen/_7dp"
             android:id="@+id/radio_female"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

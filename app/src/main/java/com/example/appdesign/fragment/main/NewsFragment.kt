@@ -31,8 +31,7 @@ class NewsFragment : Fragment(), NewsAdapterClickItem {
         val navController = findNavController()
         val items = listOf(
             News(R.drawable.test_image, "Text 1", "Text 2", "Text 3"),
-            News(R.drawable.test_image, "Text 4", "Text 5", "Text 6"),
-            News(R.drawable.test_image, "Text 7", "Text 8", "Text 9")
+            News(R.drawable.test_image, "Text 4", "Text 5", "Text 6")
         )
         val adapterNews = NewsAdapter(this)
         adapterNews.submitList(items)

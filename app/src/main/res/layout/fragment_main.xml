@@ -7,557 +7,205 @@
     android:background="@drawable/background_app"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.main.MainFragment">
-    <FrameLayout
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints">
-        <ImageView
-            android:visibility="gone"
-            android:id="@+id/ivNewCurrent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/flPhoto"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_300dp"
-            android:src="@drawable/test_image"
-            android:scaleType="centerCrop"/>
-        <FrameLayout
-            android:layout_width="@dimen/_32dp"
-            android:layout_height="@dimen/_32dp"
-            android:layout_gravity="start"
-            android:layout_marginHorizontal="@dimen/_15dp"
-            android:layout_marginBottom="@dimen/_9dp"
-            android:layout_marginTop="@dimen/_9dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints">
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnMenuOpen"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:color/transparent" />
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/hamburger_menu"/>
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_marginHorizontal="@dimen/_15dp"
-            android:layout_marginBottom="@dimen/_9dp"
-            android:layout_marginTop="@dimen/_9dp"
-            android:layout_width="@dimen/_32dp"
-            android:layout_height="@dimen/_32dp"
-            android:layout_gravity="end"
-            tools:ignore="MissingConstraints">
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnProfilePhoto"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:color/transparent" />
 
             <ImageView
+                android:id="@+id/ivNewCurrent"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/rounded_image"
-                android:clipToOutline="true"
+                android:layout_height="@dimen/_300dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/profile_photo" />
-        </FrameLayout>
-    </FrameLayout>
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_marginHorizontal="@dimen/_15dp"
-        android:id="@+id/constraintFirst"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_56dp"
-        android:background="@drawable/group_13"
-        android:paddingHorizontal="@dimen/_15dp"
-        android:paddingTop="@dimen/_15dp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
-
-        <TextView
-            android:id="@+id/tvName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Dmitriy"
-            android:textColor="#B2FFFFFF"
-            android:textSize="@dimen/_16sp" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_38dp"
-            app:layout_constraintTop_toBottomOf="@id/tvName">
-
-            <LinearLayout
-                android:id="@+id/linearLayout2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingBottom="@dimen/_15dp"
-                app:layout_constraintStart_toStartOf="parent">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tvMainEarnings"
-                    android:textColor="#80FFFFFF"
-                    android:textSize="@dimen/_14sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="$20,000.54"
-                    android:textColor="#FFFFFF"
-                    android:textSize="@dimen/_20sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingBottom="@dimen/_15dp"
-                app:layout_constraintEnd_toEndOf="parent">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tvProjectBalance"
-                    android:textColor="#80FFFFFF"
-                    android:textSize="@dimen/_14sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:text="$280.50"
-                    android:textColor="#FFFFFF"
-                    android:textSize="@dimen/_20sp" />
-            </LinearLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintSecond"
-        android:layout_marginHorizontal="@dimen/_15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_23dp"
-        app:layout_constraintTop_toBottomOf="@id/constraintFirst"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="10dp">
-
-        <TextView
-            android:id="@+id/tvStatistics"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tvStatistics"
-            android:textColor="#B2FFFFFF"
-            android:textSize="@dimen/_16sp"
-            app:layout_constraintBottom_toTopOf="@id/ll"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/materialButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:gravity="center"
-            android:text="@string/btnViewAll"
-            android:textAllCaps="false"
-            android:textColor="#F4965E"
-            android:textSize="@dimen/_16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <LinearLayout
-            android:id="@+id/ll"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_30dp"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/materialButton">
+                android:src="@drawable/test_image"
+                android:visibility="gone" />
 
             <FrameLayout
-                android:id="@+id/rl"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="@dimen/_13dp"
-                android:layout_weight="1">
+                android:layout_width="@dimen/_32dp"
+                android:layout_height="@dimen/_32dp"
+                android:layout_gravity="start"
+                android:layout_marginHorizontal="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_9dp"
+                android:layout_marginBottom="@dimen/_9dp"
+                tools:ignore="MissingConstraints">
 
-                <ImageButton
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMenuOpen"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/button_background_main" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="0dp"
-                    android:text="@string/tvW"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_16sp" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="@dimen/_13dp"
-                android:layout_weight="1">
-
-                <ImageButton
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/button_background_days" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="0dp"
-                    android:text="@string/tvD"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_16sp" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="@dimen/_13dp"
-                android:layout_weight="1">
-
-                <ImageButton
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/button_background_days" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="0dp"
-                    android:text="@string/tvV"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_16sp" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="@dimen/_13dp"
-                android:layout_weight="1">
-
-                <ImageButton
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/button_background_days" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="0dp"
-                    android:text="@string/tvM"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_16sp" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="@dimen/_13dp"
-                android:layout_weight="1">
-
-                <ImageButton
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/button_background_days" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="0dp"
-                    android:text="@string/tvY"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_16sp" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="@dimen/_13dp"
-                android:layout_weight="1">
-
-                <ImageButton
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/button_background_days" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="0dp"
-                    android:text="@string/tvAll"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_16sp" />
-            </FrameLayout>
-        </LinearLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/clFirst"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_15dp"
-            app:layout_constraintTop_toBottomOf="@id/ll">
-
-            <LinearLayout
-                android:id="@+id/llPlay"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toStartOf="@id/llUpDown"
-                app:layout_constraintStart_toStartOf="parent">
+                    android:background="@android:color/transparent" />
 
                 <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/hamburger_menu" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="@dimen/_32dp"
+                android:layout_height="@dimen/_32dp"
+                android:layout_gravity="end"
+                android:layout_marginHorizontal="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_9dp"
+                android:layout_marginBottom="@dimen/_9dp"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnProfilePhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_image"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile_photo" />
+            </FrameLayout>
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintFirst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15dp"
+            android:background="@drawable/group_13"
+            android:paddingHorizontal="@dimen/_15dp"
+            android:paddingTop="@dimen/_5dp"
+            app:layout_constraintBottom_toTopOf="@id/constraintSecond"
+            app:layout_constraintTop_toBottomOf="@id/flPhoto"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dmitriy"
+                android:textColor="#B2FFFFFF"
+                android:textSize="@dimen/_16sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30dp"
+                app:layout_constraintTop_toBottomOf="@id/tvName">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:src="@drawable/play_button" />
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_15dp"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tvMainEarnings"
+                        android:textColor="#80FFFFFF"
+                        android:textSize="@dimen/_14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$20,000.54"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/_20sp" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/_9dp"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="17"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/_24sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_4dp"
-                            android:text="@string/tvHours"
-                            android:textColor="#80FFFFFF"
-                            android:textSize="@dimen/_15sp" />
-                    </LinearLayout>
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_15dp"
+                    app:layout_constraintEnd_toEndOf="parent">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="@dimen/_5dp"
-                        android:layout_marginEnd="@dimen/_5dp"
-                        android:text=":"
-                        android:textColor="@color/white" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="17"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/_24sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_4dp"
-                            android:text="@string/tvMinutes"
-                            android:textColor="#80FFFFFF"
-                            android:textSize="@dimen/_15sp" />
-                    </LinearLayout>
+                        android:text="@string/tvProjectBalance"
+                        android:textColor="#80FFFFFF"
+                        android:textSize="@dimen/_14sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="@dimen/_5dp"
-                        android:layout_marginEnd="@dimen/_5dp"
-                        android:text=":"
-                        android:textColor="@color/white" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="17"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/_24sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_4dp"
-                            android:text="@string/tvSeconds"
-                            android:textColor="#80FFFFFF"
-                            android:textSize="@dimen/_15sp" />
-                    </LinearLayout>
+                        android:layout_gravity="end"
+                        android:text="$280.50"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/_20sp" />
                 </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-
-                android:id="@+id/llUpDown"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/llPlay">
-
-                <FrameLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <com.example.appdesign.LineChartViewUp
-                        android:layout_width="@dimen/_140dp"
-                        android:id="@+id/lineChartView"
-                        android:layout_height="@dimen/_95dp"
-                        android:layout_centerInParent="true"
-                        android:background="@drawable/up_main"/>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center|bottom"
-                        android:layout_marginBottom="@dimen/_6dp">
-
-                        <TextView
-                            android:id="@+id/tvUpSum"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="+387.65"
-                            android:textColor="@color/white" />
-
-                        <ImageView
-                            android:id="@+id/ivUpArrow"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/arrowup"
-                            app:layout_constraintStart_toEndOf="@id/tvUpSum" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </FrameLayout>
-
-                <FrameLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_8dp">
-
-                    <com.example.appdesign.LineChartViewDown
-                        android:layout_width="@dimen/_140dp"
-                        android:id="@+id/lineChartViewDown"
-                        android:layout_height="@dimen/_95dp"
-                        android:layout_centerInParent="true"
-                        android:background="@drawable/down_main"/>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center|bottom"
-                        android:layout_marginBottom="@dimen/_6dp">
-
-                        <TextView
-                            android:id="@+id/tvDownSum"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="-387.65"
-                            android:textColor="@color/white" />
-
-                        <ImageView
-                            android:id="@+id/ivDownArrow"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/arrowdown"
-                            app:layout_constraintStart_toEndOf="@id/tvDownSum" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </FrameLayout>
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintSecond"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_15dp"
-            app:layout_constraintTop_toBottomOf="@id/clFirst">
+            android:layout_marginHorizontal="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_5dp"
+            app:layout_constraintTop_toBottomOf="@id/constraintFirst"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="12dp">
 
             <TextView
-                android:id="@+id/tvTransaction"
+                android:id="@+id/tvStatistics"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tvTransaction"
+                android:text="@string/tvStatistics"
                 android:textColor="#B2FFFFFF"
                 android:textSize="@dimen/_16sp"
-                app:layout_constraintBottom_toTopOf="@id/ll1"
+                app:layout_constraintBottom_toTopOf="@id/ll"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/materialButtonSeeAll"
+                android:id="@+id/materialButton"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_40dp"
                 android:background="@android:color/transparent"
                 android:gravity="center"
-                android:text="@string/btnSeeAll"
+                android:text="@string/btnViewAll"
                 android:textAllCaps="false"
                 android:textColor="#F4965E"
-                android:textSize="@dimen/_16sp"
+                android:textSize="@dimen/_14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
-                android:id="@+id/ll1"
+                android:id="@+id/ll"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_25dp"
                 android:orientation="horizontal"
-                app:layout_constraintTop_toBottomOf="@id/materialButtonSeeAll">
+                app:layout_constraintTop_toBottomOf="@id/materialButton">
 
                 <FrameLayout
-                    android:id="@+id/rlMedia"
+                    android:id="@+id/rl"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="@dimen/_13dp"
                     android:layout_weight="1">
 
-                    <ImageView
+                    <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/media" />
+                        android:background="@drawable/button_background_main" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center|bottom"
-                        android:layout_marginBottom="@dimen/_8dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
                         android:text="@string/tvW"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
@@ -565,51 +213,418 @@
                 </FrameLayout>
 
                 <FrameLayout
-                    android:id="@+id/rlTask"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="@dimen/_13dp"
                     android:layout_weight="1">
 
-                    <ImageView
+                    <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/tasks" />
+                        android:background="@drawable/button_background_days" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center|bottom"
-                        android:layout_marginBottom="@dimen/_8dp"
-                        android:text="@string/tvW"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:text="@string/tvD"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="@dimen/_16sp" />
                 </FrameLayout>
 
                 <FrameLayout
-                    android:id="@+id/rlNew"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="@dimen/_13dp"
                     android:layout_weight="1">
 
-                    <ImageView
+                    <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/news" />
+                        android:background="@drawable/button_background_days" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center|bottom"
-                        android:layout_marginBottom="@dimen/_8dp"
-                        android:text="@string/tvW"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:text="@string/tvV"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_16sp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_13dp"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_background_days" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:text="@string/tvM"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_16sp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_13dp"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_background_days" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:text="@string/tvY"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_16sp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_13dp"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_background_days" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:text="@string/tvAll"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="@dimen/_16sp" />
                 </FrameLayout>
             </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clFirst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15dp"
+                app:layout_constraintBottom_toTopOf="@id/clTrans"
+                app:layout_constraintTop_toBottomOf="@id/ll">
+
+                <LinearLayout
+                    android:id="@+id/llPlay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toStartOf="@id/llUpDown"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/play_button" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_2dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="17"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_22sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_4dp"
+                                android:text="@string/tvHours"
+                                android:textColor="#80FFFFFF"
+                                android:textSize="@dimen/_13sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5dp"
+                            android:layout_marginEnd="@dimen/_5dp"
+                            android:text=":"
+                            android:textColor="@color/white" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="17"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_22sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_4dp"
+                                android:text="@string/tvMinutes"
+                                android:textColor="#80FFFFFF"
+                                android:textSize="@dimen/_13sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5dp"
+                            android:layout_marginEnd="@dimen/_5dp"
+                            android:text=":"
+                            android:textColor="@color/white" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="17"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_22sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_4dp"
+                                android:text="@string/tvSeconds"
+                                android:textColor="#80FFFFFF"
+                                android:textSize="@dimen/_13sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llUpDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/llPlay">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.example.appdesign.LineChartViewUp
+                            android:id="@+id/lineChartView"
+                            android:layout_width="@dimen/_140dp"
+                            android:layout_height="@dimen/_70dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/up_main" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|bottom"
+                            android:layout_marginBottom="@dimen/_6dp">
+
+                            <TextView
+                                android:id="@+id/tvUpSum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+387.65"
+                                android:textColor="@color/white" />
+
+                            <ImageView
+                                android:id="@+id/ivUpArrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/arrowup"
+                                app:layout_constraintStart_toEndOf="@id/tvUpSum" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8dp">
+
+                        <com.example.appdesign.LineChartViewDown
+                            android:id="@+id/lineChartViewDown"
+                            android:layout_width="@dimen/_140dp"
+                            android:layout_height="@dimen/_70dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/down_main" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|bottom"
+                            android:layout_marginBottom="@dimen/_6dp">
+
+                            <TextView
+                                android:id="@+id/tvDownSum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="-387.65"
+                                android:textColor="@color/white" />
+
+                            <ImageView
+                                android:id="@+id/ivDownArrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/arrowdown"
+                                app:layout_constraintStart_toEndOf="@id/tvDownSum" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clTrans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5dp"
+                app:layout_constraintTop_toBottomOf="@id/clFirst">
+
+                <TextView
+                    android:id="@+id/tvTransaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvTransaction"
+                    android:textColor="#B2FFFFFF"
+                    android:textSize="@dimen/_16sp"
+                    app:layout_constraintBottom_toTopOf="@id/ll1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/materialButtonSeeAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:text="@string/btnSeeAll"
+                    android:textAllCaps="false"
+                    android:textColor="#F4965E"
+                    android:textSize="@dimen/_14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/materialButtonSeeAll">
+
+                    <FrameLayout
+                        android:id="@+id/rlMedia"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/_13dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/media" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|bottom"
+                            android:layout_marginBottom="@dimen/_3dp"
+                            android:text="@string/tvW"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_14sp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/rlTask"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/_13dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/tasks" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|bottom"
+                            android:layout_marginBottom="@dimen/_3dp"
+                            android:text="@string/tvW"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_14sp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/rlNew"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/_13dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/news" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|bottom"
+                            android:layout_marginBottom="@dimen/_3dp"
+                            android:text="@string/tvW"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_14sp" />
+                    </FrameLayout>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
